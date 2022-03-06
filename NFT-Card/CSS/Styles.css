@@ -83,7 +83,7 @@ p {
 #footer-section {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     padding:  0.6rem 0;
     border-top: 1px solid hsl(215, 32%, 27%);
@@ -96,6 +96,8 @@ p {
 }
 #footer-section p {
     font-weight: 300;
+    padding: 1rem;
+    font-size: 1rem;
 }
 .creator {
     color: white;
