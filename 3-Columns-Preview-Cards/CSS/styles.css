@@ -18,6 +18,9 @@ main {
     align-items: center;
     margin: 2rem 1rem;
 }
+h1 {
+    display: none;
+}
 section {
     padding: 4rem 2rem 4rem 2rem;
 }
@@ -100,12 +103,12 @@ section a:hover {
 }
 @media (min-width: 1440px) and (max-width: 1600px){
     main {
-        width: 70%;
+        width: 65%;
     }
 }
 @media (min-width: 1600px){
     main {
-        width: 65%;
+        width: 55%;
     }
 }
 @media (min-width: 800px) {
