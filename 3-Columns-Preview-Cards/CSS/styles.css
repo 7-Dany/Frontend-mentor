@@ -98,9 +98,14 @@ section a:hover {
         width: 75%;
     }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1440px) and (max-width: 1600px){
     main {
-        width: 58%;
+        width: 70%;
+    }
+}
+@media (min-width: 1600px){
+    main {
+        width: 65%;
     }
 }
 @media (min-width: 800px) {
