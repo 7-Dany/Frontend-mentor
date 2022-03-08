@@ -58,7 +58,7 @@ main p {
 
 .group {
     background-color: #FFFFFF;
-    border-radius: 10px;
+    border-radius: 5px;
     border: 1px solid white;
     box-shadow: 0 10px 10px 0 hsl(208deg 16% 85%);
 }
