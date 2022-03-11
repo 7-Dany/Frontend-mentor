@@ -18,7 +18,7 @@ header {
   margin: 4rem auto;
 }
 header h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 200;
   color: #4c4e61;
 }
@@ -67,7 +67,6 @@ main #calculator {
   border-top: 4px solid #549ef2;
 }
 main .group {
-  background-color: $card-background;
   border-radius: 5px;
   box-shadow: 0 10px 10px 0 #d3d9df;
   display: flex;
