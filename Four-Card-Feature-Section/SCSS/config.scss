@@ -1,0 +1,17 @@
+$background-color: hsl(0, 0%, 98%);
+$team-builder: hsl(0, 78%, 62%);
+$supervisor: hsl(180, 62%, 55%);
+$karma: hsl(34, 97%, 64%);
+$calculator: hsl(212, 86%, 64%);
+$card-background: #FFFFFF;
+$header-color:  hsl(234, 12%, 34%);
+$paragraph-color:  hsl(229, 6%, 66%);
+$box-shadow-color:hsl(208deg 16% 85%);
+
+* {
+  box-sizing: border-box;
+}
+@mixin border-top ($color) {
+  border-top: 4px solid $color;
+}
+

@@ -1,0 +1,132 @@
+@import "config";
+
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  color: $paragraph-color;
+  background-color: $background-color;
+  display: grid;
+  grid-template: 30% 70% / repeat(1, 1fr);
+  line-height: 1.5;
+  overflow: hidden;
+}
+
+header {
+  text-align: center;
+  margin: 4rem auto;
+
+  h1 {
+    font-size: 1.8rem;
+    font-weight: 200;
+    color: $header-color;
+  }
+
+  span {
+    font-weight: 600;
+    display: block;
+  }
+
+  p {
+    font-size: 1rem;
+    font-weight: 400;
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+main {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-template-rows: repeat(9, 1fr);
+  grid-gap: 2rem;
+
+  h2 {
+    color: $header-color;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  #supervisor {
+    grid-row: 3 / 7;
+    @include border-top($supervisor)
+  }
+
+  #team-builder {
+    grid-row: 1 / 5;
+    @include border-top($team-builder)
+  }
+
+  #karma {
+    grid-row: 5 / 9;
+    @include border-top($karma)
+
+  }
+
+  #calculator {
+    grid-row: 3 / 7;
+    @include border-top($calculator)
+
+  }
+
+  .group {
+    border-radius: 5px;
+    box-shadow: 0 10px 10px 0 $box-shadow-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1rem 2rem 2rem;
+
+    .icon {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 651px) and (max-width: 1023px) {
+  main {
+    margin-top: 3rem;
+    justify-content: space-evenly;
+
+    #supervisor {
+      grid-row: 1/ 5;
+    }
+
+    #calculator {
+      grid-row: 5/9;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  body {
+    overflow: auto;
+    grid-template: 35% 65% / repeat(1, 1fr);
+  }
+  header {
+    p {
+      width: 90%;
+    }
+  }
+  main {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+}
