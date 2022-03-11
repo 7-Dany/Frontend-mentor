@@ -16,7 +16,7 @@ header {
   margin: 4rem auto;
 
   h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 200;
     color: $header-color;
   }
@@ -76,6 +76,7 @@ main {
   }
 
   .group {
+    background-color: $card-background;
     border-radius: 5px;
     box-shadow: 0 10px 10px 0 $box-shadow-color;
     display: flex;
