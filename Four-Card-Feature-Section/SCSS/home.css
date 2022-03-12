@@ -108,7 +108,9 @@ main .group .icon {
   header p {
     width: 90%;
   }
-
+  header h1 {
+    font-size: 1.8rem;
+  }
   main {
     width: 95%;
     display: flex;
