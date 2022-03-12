@@ -1,0 +1,21 @@
+@import "main";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  font-family: 'Spartan', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.2;
+  @media (min-width: 1024px) {
+    background: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg");
+    height: 100vh;
+  }
+  @media (max-width: 1023px) {
+    background: url("../images/bg-pattern-top-mobile.svg"), url("../images/bg-pattern-bottom-mobile.svg");
+  }
+}
