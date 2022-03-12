@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.2;
+  font-family: 'Kumbh Sans', sans-serif;
+  overflow: hidden;
+  background: linear-gradient(90deg, hsl(229, 23%, 23%, 0.8) , hsla(185, 75%, 39%, 1));
+
+  .image-top {
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    top: -30rem;
+    left: -5rem;
+    background: url("../images/bg-pattern-top.svg") no-repeat left;
+    background-size: contain;
+    z-index: 0;
+  }
+
+  .image-bottom {
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    bottom: -30rem;
+    right: -10rem;
+    background: url("../images/bg-pattern-bottom.svg") no-repeat right;
+    background-size: contain;
+    z-index: 0;
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    border-radius: 15px;
+    background-color: white;
+    text-align: center;
+    overflow: hidden;
+    align-self: center;
+    z-index: 2;
+
+    #top {
+      img {
+        border-radius: 15px 15px 0 0;
+      }
+    }
+
+    #header {
+      padding: 1rem;
+
+      h1 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+        color: hsl(229, 23%, 23%);
+
+        span {
+          font-weight: 400;
+          color: hsl(227, 10%, 46%);
+        }
+      }
+
+      img {
+        margin-top: -4.8rem;
+        border-radius: 50%;
+        border: 5px solid white;
+        width: 100%;
+      }
+
+      p {
+        font-weight: 400;
+        color: hsl(227, 10%, 46%);
+      }
+    }
+
+    #info {
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      border-top: 1px solid  hsl(0, 0%, 90%);
+      padding: 1rem;
+      margin: 1rem 0;
+
+      h2 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: hsl(229, 23%, 23%);
+      }
+
+      p {
+        font-weight: 400;
+        color: hsl(227, 10%, 46%);
+      }
+    }
+  }
+}
