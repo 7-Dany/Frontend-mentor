@@ -90,14 +90,12 @@ body main #why-us p {
     height: 100vh;
   }
   body header {
-    height: 35%;
     width: 50%;
     border-radius: 10px 10px 0 0;
     padding: 2rem 3rem;
   }
   body main {
     width: 50%;
-    height: 30%;
     grid-template-columns: repeat(2, 1fr);
   }
   body main #subscription {
