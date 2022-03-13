@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5eff5;
+  padding: 1rem;
+  line-height: 1.5;
+}
+body header {
+  width: 90%;
+  color: #98a6bd;
+  background-color: #FFFFFF;
+  padding: 1.5rem 1.5rem 0;
+  border-radius: 10px 10px 0 0;
+}
+body header h1 {
+  font-size: 1.5rem;
+  color: #22918f;
+  margin: 1rem 0;
+}
+body header p {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+}
+body header p:nth-of-type(1) {
+  color: #c0df34;
+  font-size: 1.3rem;
+}
+body main {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr;
+  color: #e5eff5;
+}
+body main #subscription {
+  background-color: #22918f;
+  padding: 1.5rem;
+}
+body main #subscription button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #c0df34;
+  color: #FFFFFF;
+  margin: 1rem auto;
+  box-shadow: 0 10px 10px #27a5a3;
+}
+body main #subscription button:hover {
+  background-color: #a8c71f;
+  color: #27a5a3;
+}
+body main #subscription h2 {
+  font-size: 1.4rem;
+  margin: 1rem 0;
+}
+body main #subscription p {
+  margin: 1rem 0;
+}
+body main #subscription p:nth-of-type(1) {
+  color: #98a6bd;
+}
+body main #subscription p:nth-of-type(1) span {
+  color: #FFFFFF;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+body main #why-us {
+  border-radius: 0 0 10px 10px;
+  padding: 1.5rem;
+  background-color: #2ab2af;
+  line-height: 1.1;
+}
+body main #why-us h3 {
+  font-size: 1.3rem;
+  margin: 1rem 0;
+}
+body main #why-us p {
+  font-size: 0.9rem;
+}
+
+@media (min-width: 1024px) {
+  body {
+    height: 100vh;
+  }
+  body header {
+    height: 28%;
+    width: 50%;
+    border-radius: 10px 10px 0 0;
+    padding: 2rem 3rem;
+  }
+  body main {
+    width: 50%;
+    height: 30%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  body main #subscription {
+    border-radius: 0 0 0 10px;
+    padding: 2rem 3rem;
+  }
+  body main #why-us {
+    border-radius: 0 0 10px 0;
+    line-height: 1.5;
+    padding: 2rem 3rem;
+  }
+}
+@media (min-width: 900px) and (max-width: 1440px) {
+  header {
+    width: 80%;
+    padding: 2rem 2rem 0;
+  }
+
+  main {
+    width: 80%;
+  }
+  main #subscription {
+    padding: 2rem;
+  }
+  main #why-us {
+    padding: 2rem;
+  }
+  main #why-us p {
+    font-size: 1.2rem;
+  }
+}
+
+/*# sourceMappingURL=home.css.map */
