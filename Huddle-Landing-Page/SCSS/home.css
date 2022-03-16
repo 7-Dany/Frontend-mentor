@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+h1 {
+  color: #FFF;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+p {
+  color: #FFF;
+  font-weight: 400;
+}
+
+@media (max-width: 1024px) {
+  body {
+    background: #674baf url("../images/bg-mobile.svg") no-repeat;
+    background-size: contain;
+  }
+}
+@media (min-width: 1025px) {
+  body {
+    background: #674baf url("../images/bg-desktop.svg") no-repeat;
+    background-size: 100% 100%;
+  }
+}
+body {
+  display: flex;
+  flex-flow: column wrap;
+}
+body header {
+  display: flex;
+  justify-content: flex-start;
+  margin: 3rem;
+  width: fit-content;
+}
+body header img {
+  width: 70%;
+  align-self: flex-start;
+}
+body main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+body main .mockup {
+  margin: 1rem;
+  width: fit-content;
+}
+body main .mockup img {
+  width: 100%;
+}
+body main .header {
+  width: fit-content;
+  margin-top: 1rem;
+  text-align: center;
+}
+body main .header h1 {
+  font-size: 1.8rem;
+}
+body main .header p {
+  font-size: 1rem;
+  margin: 1rem auto;
+}
+body main .header button {
+  border: none;
+  border-radius: 25px;
+  padding: 1rem;
+  width: 70%;
+  color: #674baf;
+  box-shadow: 1px 1px 2px 2px #503A88;
+  transition: background-color 300ms ease-in-out;
+}
+body main .header button:hover {
+  cursor: pointer;
+  color: #FFF;
+  background-color: #e882e8;
+}
+body footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 2rem;
+}
+body footer div:nth-child(1) a {
+  padding: 1rem 1.2rem;
+}
+body footer div a {
+  border: 1px solid #FFF;
+  border-radius: 50%;
+  margin: 0.5rem;
+  padding: 1rem;
+  text-decoration: none;
+  color: #FFFFFF;
+  transition: all 300ms ease-in-out;
+}
+body footer div a:hover {
+  cursor: pointer;
+  border-color: #e882e8;
+  color: #e882e8;
+}
+
+@media (min-width: 1025px) {
+  body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 20px repeat(12, 1fr) 20px;
+    grid-template-rows: repeat(12, 1fr);
+    gap: 1rem;
+  }
+  body header {
+    grid-column: 2/5;
+    grid-row: 1/3;
+    width: 100%;
+  }
+  body main {
+    width: 100%;
+    grid-row: 3/12;
+    grid-column: 2/13;
+    flex-direction: row;
+    padding: 0;
+    gap: 2rem;
+  }
+  body main .mockup {
+    width: 70%;
+    height: 100%;
+    display: flex;
+  }
+  body main .mockup img {
+    width: 100%;
+    height: 100%;
+  }
+  body main .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 35%;
+    height: 100%;
+    text-align: left;
+    line-height: 1.5;
+  }
+  body main .header button {
+    width: 40%;
+  }
+  body main .header h1 {
+    font-size: 2rem;
+  }
+  body main .header p {
+    font-size: 1.3rem;
+  }
+  body footer {
+    grid-column: 11/13;
+    grid-row: 11/12;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+  }
+}
+
+/*# sourceMappingURL=home.css.map */
