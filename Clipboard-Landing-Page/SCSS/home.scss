@@ -1,0 +1,85 @@
+@import "config", "header", "main", "footer";
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, a {
+  color: $dark-grayish-blue;
+  font-weight: 600;
+}
+
+p {
+  color: $grayish-blue;
+  font-weight: 400;
+}
+
+body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Bai Jamjuree', sans-serif;
+  line-height: 1.8;
+
+  .download-buttons {
+    margin-bottom: 2rem;
+
+    button:nth-child(1) {
+      background-color: $strong-cyan;
+      box-shadow: 0 2px 0 1px hsl(171, 66%, 39%);
+
+      &:hover {
+        background-color: hsl(171, 66%, 60%);
+      }
+    }
+
+    button:nth-child(2) {
+      background-color: $light-blue;
+      box-shadow: 0 2px 0 1px hsl(233, 100%, 66%);
+
+      &:hover {
+        background-color: hsl(233, 100%, 80%);
+      }
+    }
+
+    button {
+      font-weight: 400;
+      font-size: 1rem;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 0.8rem 2rem;
+      cursor: pointer;
+      margin: 0 1rem;
+    }
+  }
+
+  header {
+    background: url("../images/bg-header-desktop.png") no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    .download-buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      button {
+        margin: 1rem;
+        width: 90%;
+      }
+    }
+
+    header {
+      background: url("../images/bg-header-mobile.png") no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+}

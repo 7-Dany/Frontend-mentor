@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+header .logo {
+  margin-top: 5rem;
+}
+header .header {
+  width: 50vw;
+  line-height: 1.5;
+  margin: 2rem;
+}
+header .header h1 {
+  font-size: 2.4rem;
+}
+header .header p {
+  font-size: 1rem;
+  margin: 0.5rem;
+  display: inline-block;
+}
+
+@media (max-width: 800px) {
+  body header {
+    margin: 0 auto 1rem;
+    width: 100%;
+  }
+  body header .header {
+    width: 90vw;
+  }
+}
+main .section-header {
+  width: 50%;
+  margin: 0 auto;
+}
+main .section-header h2 {
+  font-size: 2rem;
+}
+main .section-header p {
+  font-size: 1rem;
+  margin: 1rem;
+}
+main #Features-section {
+  margin: 2rem;
+}
+main #Features-section .features-description {
+  display: flex;
+  justify-content: space-evenly;
+}
+main #Features-section .features-description .image {
+  margin: 2rem 2rem 2rem -4rem;
+}
+main #Features-section .features-description .features {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+main #Features-section .features-description .features div {
+  width: 60%;
+  text-align: left;
+}
+main #Features-section .features-description .features div h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+main #Features-section .features-description .features div p {
+  font-size: 1rem;
+  display: inline-block;
+}
+main #Access {
+  margin: 2rem;
+}
+main #Advantages .device-advantages {
+  margin: 2rem;
+  display: flex;
+}
+main #Advantages .device-advantages div {
+  width: 20%;
+  margin: 2rem auto;
+}
+main #Advantages .device-advantages div h3 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+main #Advantages .device-advantages div p {
+  display: inline-block;
+  font-weight: 400;
+}
+main #Companies {
+  margin: 10rem 2rem;
+  display: flex;
+  justify-content: space-around;
+}
+main #Download-app {
+  margin: 3rem;
+}
+
+@media (max-width: 800px) {
+  main .section-header {
+    width: 100%;
+  }
+  main #Features-section {
+    width: 90%;
+    margin: 0 auto;
+  }
+  main #Features-section .features-description {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main #Features-section .features-description .features div {
+    margin: 2rem;
+    text-align: center;
+  }
+  main #Features-section .features-description .image {
+    width: 100%;
+    margin: 2rem auto;
+  }
+  main #Features-section .features-description .image img {
+    width: 100%;
+  }
+  main #Access {
+    width: 90%;
+  }
+  main #Access img {
+    width: 100%;
+  }
+  main #Advantages {
+    width: 90%;
+    margin: 0 auto;
+  }
+  main #Advantages .device-advantages {
+    flex-direction: column;
+  }
+  main #Advantages .device-advantages div {
+    width: 90%;
+  }
+  main #Companies {
+    margin: 0 auto;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main #Companies img {
+    margin: 2rem;
+  }
+  main #Download-app {
+    width: 90%;
+    margin: 2rem auto;
+  }
+}
+footer {
+  margin-top: 5rem;
+  background-color: #f2f2f2;
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+footer .footer-img img {
+  width: 50%;
+}
+footer .site-links {
+  width: 40%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  text-align: left;
+}
+footer .site-links a {
+  margin: 0.5rem;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 400;
+}
+footer .social-links a {
+  text-decoration: none;
+  margin: 1rem;
+}
+footer a:hover {
+  color: #26baa4;
+}
+
+@media (max-width: 800px) {
+  footer {
+    flex-direction: column;
+  }
+  footer .site-links {
+    margin: 1rem;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  footer .social-links {
+    margin: 1rem;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, a {
+  color: #4c545d;
+  font-weight: 600;
+}
+
+p {
+  color: #9fabb2;
+  font-weight: 400;
+}
+
+body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bai Jamjuree", sans-serif;
+  line-height: 1.8;
+}
+body .download-buttons {
+  margin-bottom: 2rem;
+}
+body .download-buttons button:nth-child(1) {
+  background-color: #26baa4;
+  box-shadow: 0 2px 0 1px #22a591;
+}
+body .download-buttons button:nth-child(1):hover {
+  background-color: #56dcc8;
+}
+body .download-buttons button:nth-child(2) {
+  background-color: #6173ff;
+  box-shadow: 0 2px 0 1px #5266ff;
+}
+body .download-buttons button:nth-child(2):hover {
+  background-color: #99a5ff;
+}
+body .download-buttons button {
+  font-weight: 400;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  margin: 0 1rem;
+}
+body header {
+  background: url("../images/bg-header-desktop.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+@media (max-width: 800px) {
+  body .download-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  body .download-buttons button {
+    margin: 1rem;
+    width: 90%;
+  }
+  body header {
+    background: url("../images/bg-header-mobile.png") no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+/*# sourceMappingURL=home.css.map */
