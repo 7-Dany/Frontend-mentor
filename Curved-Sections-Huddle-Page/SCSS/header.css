@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap");
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 8rem;
+}
+header button {
+  border: 2px solid #ff52bf;
+  color: #ff52bf;
+  background-color: transparent;
+  border-radius: 25px;
+  padding: 0.5rem 2rem;
+  box-shadow: 3px 3px 5px 5px #f5faff;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+}
+header button:hover {
+  border-color: #ff8fd8;
+  color: #ff8fd8;
+}
+
+/*# sourceMappingURL=header.css.map */

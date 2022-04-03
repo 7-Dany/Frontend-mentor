@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap");
+main {
+  width: 100%;
+}
+
+#header-section {
+  background-image: url("../images/bg-section-top-desktop-1.svg"), url("../images/bg-section-top-desktop-2.svg");
+  background-repeat: no-repeat;
+  background-position: left bottom, left bottom;
+  background-size: 100% 10rem;
+  padding-bottom: 15rem;
+}
+#header-section .app-header h1 {
+  font-size: 2.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  margin: 1.5rem;
+}
+#header-section .app-header p {
+  font-size: 1rem;
+  font-weight: 400;
+  width: 50vw;
+  margin: 1.5rem auto;
+}
+#header-section .app-header button {
+  font-size: 1.2rem;
+  display: block;
+  margin: 1.5rem auto;
+  padding: 1.5rem 5rem;
+  color: #FFF;
+  background: #ff52bf;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 3px 3px 5px 5px #f5faff;
+  transition: background-color 300ms ease-in-out;
+}
+#header-section .app-header button:hover {
+  background-color: #ff8fd8;
+}
+#header-section .app-header img {
+  margin: 4rem auto;
+}
+#header-section .app-records {
+  display: flex;
+  justify-content: space-around;
+}
+#header-section .app-records .record {
+  display: flex;
+  flex-direction: column;
+}
+#header-section .app-records .record img {
+  align-self: flex-start;
+  width: 20%;
+  margin: 0.5rem;
+}
+#header-section .app-records .record p {
+  color: #92959C;
+  font-size: 1.2rem;
+}
+#header-section .app-records .record-number {
+  color: #00252e;
+  display: block;
+  font-size: 4.5rem;
+  font-weight: 700;
+}
+
+#grow-together, #flowing-conversation, #your-users {
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f5faff;
+}
+#grow-together .section-info, #flowing-conversation .section-info, #your-users .section-info {
+  display: flex;
+  flex-direction: column;
+}
+#grow-together .section-info h2, #flowing-conversation .section-info h2, #your-users .section-info h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+#grow-together .section-info p, #flowing-conversation .section-info p, #your-users .section-info p {
+  width: 30vw;
+  font-weight: 600;
+}
+#grow-together img, #flowing-conversation img, #your-users img {
+  width: 30%;
+}
+
+#flowing-conversation {
+  padding: 15rem 0;
+  flex-direction: row-reverse;
+  background-color: #FFFFFF;
+  background-image: url("../images/bg-section-bottom-desktop-2.svg"), url("../images/bg-section-bottom-desktop-1.svg"), url("../images/bg-section-top-desktop-1.svg"), url("../images/bg-section-top-desktop-2.svg");
+  background-repeat: no-repeat;
+  background-position: left top, right top, left bottom, right bottom;
+  background-size: 100% 10rem;
+}
+
+#build-community {
+  padding: 20rem;
+  background-image: url("../images/bg-section-bottom-desktop-2.svg"), url("../images/bg-section-bottom-desktop-1.svg"), url("../images/bg-footer-top-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: left top, right top, bottom;
+  background-size: 100% 10rem;
+}
+#build-community h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  color: #00252e;
+  font-weight: 700;
+}
+#build-community button {
+  font-size: 1.2rem;
+  display: block;
+  margin: 1.5rem auto;
+  padding: 1.5rem 5rem;
+  color: #FFF;
+  background: #ff52bf;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 3px 3px 5px 5px #f5faff;
+  transition: background-color 300ms ease-in-out;
+}
+#build-community button:hover {
+  background-color: #ff8fd8;
+}
+
+/*# sourceMappingURL=main.css.map */

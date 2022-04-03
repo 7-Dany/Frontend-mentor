@@ -1,0 +1,137 @@
+@import "config";
+
+footer {
+  padding: 10rem 0 2rem;
+  text-align: left;
+  display: flex;
+  justify-content: space-evenly;
+  color: #FFFFFF;
+  background: $very-dark-cyan;
+
+  .footer-info {
+    width: 30%;
+
+    .white-img {
+      margin: 0 0 1rem;
+      filter: brightness(0) invert(100%) sepia(100%) saturate(1%) hue-rotate(43deg) brightness(102%) contrast(101%);
+    }
+
+    p {
+      width: 15vw;
+      font-size: 0.9rem;
+    }
+
+    .personal-info {
+      display: flex;
+      margin: 1rem 0;
+      align-items: center;
+
+      & p {
+        width: max-content;
+      }
+
+      img {
+        margin: 0.5rem 0.5rem 0.5rem 0;
+      }
+    }
+
+    .social-icons {
+      margin-top: 5rem;
+
+      a {
+        text-decoration: none;
+        color: #FFF;
+        margin-right: 1rem;
+        transition: color 300ms ease-in-out;
+        &:hover{
+          color: hsl(192, 100%, 50%);
+        }
+      }
+    }
+
+  }
+
+  .subscribe-info {
+    width: 30%;
+
+    h3 {
+      margin: 1rem 0;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    p {
+      width: 20vw;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+    }
+
+    input {
+      padding: 0.7rem 5rem 0.7rem 0.5rem;
+      margin: 1rem 0.5rem 1rem 0;
+      border: none;
+      border-radius: 8px;
+    }
+
+    button {
+      padding: 0.7rem 2rem;
+      color: #FFFFFF;
+      background: $pink;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 300ms ease-in-out;
+
+      &:hover {
+        background-color: $light-pink;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  footer {
+    flex-direction: column-reverse;
+    text-align: center;
+
+    .footer-info {
+      margin: 4rem auto 2rem;
+      width: 100%;
+
+      p {
+        width: 50vw;
+        margin: 1rem auto;
+      }
+
+      .personal-info {
+        display: block;
+
+        & p {
+          display: inline-block;
+          margin: 0 auto;
+        }
+
+        img {
+          margin: 0 0.5rem;
+          display: inline-block;
+        }
+      }
+    }
+
+    .subscribe-info {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      p {
+        width: 60vw;
+        margin: 1rem auto;
+      }
+
+      button {
+        width: max-content;
+        align-self: center;
+        margin-left: 8rem;
+      }
+    }
+  }
+}

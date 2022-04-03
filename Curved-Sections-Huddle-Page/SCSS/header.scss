@@ -1,0 +1,30 @@
+@import "config";
+
+header {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 7rem;
+
+  button {
+    border: 2px solid $pink;
+    color: $pink;
+    background-color: transparent;
+    border-radius: 25px;
+    padding: 0.5rem 2rem;
+    box-shadow: 3px 3px 5px 5px $very-pale-blue;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      border-color: $light-pink;
+      color: $light-pink;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  header {
+    padding: 3rem;
+  }
+}

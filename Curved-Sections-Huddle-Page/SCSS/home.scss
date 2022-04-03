@@ -1,0 +1,17 @@
+@import "config","header", "main", "footer";
+
+html{
+  scroll-snap-type: y mandatory;
+}
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  text-align: center;
+  line-height: 1.5;
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+}

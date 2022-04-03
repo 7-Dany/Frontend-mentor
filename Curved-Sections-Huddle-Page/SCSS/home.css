@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap");
+header {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 7rem;
+}
+header button {
+  border: 2px solid #ff52bf;
+  color: #ff52bf;
+  background-color: transparent;
+  border-radius: 25px;
+  padding: 0.5rem 2rem;
+  box-shadow: 3px 3px 5px 5px #f5faff;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+}
+header button:hover {
+  border-color: #ff8fd8;
+  color: #ff8fd8;
+}
+
+@media (max-width: 1024px) {
+  header {
+    padding: 3rem;
+  }
+}
+main {
+  width: 100vw;
+}
+
+#header-section {
+  background-image: url("../images/bg-section-top-desktop-1.svg"), url("../images/bg-section-top-desktop-2.svg");
+  background-repeat: no-repeat;
+  background-position: left bottom, right bottom;
+  background-size: 100% 10rem;
+  padding-bottom: 15rem;
+}
+#header-section .app-header h1 {
+  font-size: 2.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  margin: 1.5rem;
+}
+#header-section .app-header p {
+  font-size: 1rem;
+  font-weight: 400;
+  width: 50vw;
+  margin: 1.5rem auto;
+}
+#header-section .app-header button {
+  font-size: 1.2rem;
+  display: block;
+  margin: 1.5rem auto;
+  padding: 1.5rem 5rem;
+  color: #FFF;
+  background: #ff52bf;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 3px 3px 5px 5px #f5faff;
+  transition: background-color 300ms ease-in-out;
+}
+#header-section .app-header button:hover {
+  background-color: #ff8fd8;
+}
+#header-section .app-header img {
+  margin: 4rem auto;
+  width: 70%;
+}
+#header-section .app-records {
+  display: flex;
+  justify-content: space-around;
+}
+#header-section .app-records .record {
+  display: flex;
+  flex-direction: column;
+}
+#header-section .app-records .record img {
+  align-self: flex-start;
+  width: 20%;
+  margin: 0.5rem;
+}
+#header-section .app-records .record p {
+  color: #92959C;
+  font-size: 1.2rem;
+}
+#header-section .app-records .record-number {
+  color: #00252e;
+  display: block;
+  font-size: 4.5rem;
+  font-weight: 700;
+}
+
+#grow-together, #flowing-conversation, #your-users {
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f5faff;
+}
+#grow-together .section-info, #flowing-conversation .section-info, #your-users .section-info {
+  display: flex;
+  flex-direction: column;
+}
+#grow-together .section-info h2, #flowing-conversation .section-info h2, #your-users .section-info h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+#grow-together .section-info p, #flowing-conversation .section-info p, #your-users .section-info p {
+  width: 30vw;
+  font-weight: 600;
+}
+#grow-together img, #flowing-conversation img, #your-users img {
+  width: 30%;
+}
+
+#flowing-conversation {
+  padding: 15rem 0;
+  flex-direction: row-reverse;
+  background-color: #FFFFFF;
+  background-image: url("../images/bg-section-bottom-desktop-2.svg"), url("../images/bg-section-bottom-desktop-1.svg"), url("../images/bg-section-top-desktop-2.svg");
+  background-repeat: no-repeat;
+  background-position: left top, right top, bottom;
+  background-size: 100% 10rem;
+}
+
+#build-community {
+  padding: 20rem;
+  background-image: url("../images/bg-section-bottom-desktop-2.svg"), url("../images/bg-section-bottom-desktop-1.svg"), url("../images/bg-footer-top-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: left top, right top, bottom;
+  background-size: 100% 10rem;
+}
+#build-community h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  color: #00252e;
+  font-weight: 700;
+}
+#build-community button {
+  font-size: 1.2rem;
+  display: block;
+  margin: 1.5rem auto;
+  padding: 1.5rem 5rem;
+  color: #FFF;
+  background: #ff52bf;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 3px 3px 5px 5px #f5faff;
+  transition: background-color 300ms ease-in-out;
+}
+#build-community button:hover {
+  background-color: #ff8fd8;
+}
+
+@media (max-width: 1024px) {
+  #header-section {
+    background-image: url("../images/bg-section-top-mobile-1.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 5rem;
+  }
+  #header-section .app-records {
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+  }
+  #header-section .app-records .record {
+    width: 30%;
+    margin: 2rem;
+  }
+
+  #grow-together, #your-users, #flowing-conversation {
+    padding: 10rem 0;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  #grow-together .section-info p, #your-users .section-info p, #flowing-conversation .section-info p {
+    width: 80vw;
+  }
+
+  #flowing-conversation {
+    padding: 15rem 0;
+    background-image: url("../images/bg-section-bottom-mobile-2.svg"), url("../images/bg-section-bottom-mobile-1.svg"), url("../images/bg-section-top-mobile-2.svg");
+    background-repeat: no-repeat;
+    background-position: left top, right top, bottom;
+    background-size: 100% 5rem;
+  }
+
+  #build-community {
+    background-image: url("../images/bg-section-bottom-mobile-1.svg"), url("../images/bg-section-bottom-mobile-2.svg"), url("../images/bg-footer-top-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: left top, right top, bottom;
+    background-size: 100% 5rem;
+  }
+
+  #build-community {
+    width: 100vw;
+    padding: 15rem 0;
+  }
+}
+footer {
+  padding: 10rem 0 2rem;
+  text-align: left;
+  display: flex;
+  justify-content: space-evenly;
+  color: #FFFFFF;
+  background: #00252e;
+}
+footer .footer-info {
+  width: 30%;
+}
+footer .footer-info .white-img {
+  margin: 0 0 1rem;
+  filter: brightness(0) invert(100%) sepia(100%) saturate(1%) hue-rotate(43deg) brightness(102%) contrast(101%);
+}
+footer .footer-info p {
+  width: 15vw;
+  font-size: 0.9rem;
+}
+footer .footer-info .personal-info {
+  display: flex;
+  margin: 1rem 0;
+  align-items: center;
+}
+footer .footer-info .personal-info p {
+  width: max-content;
+}
+footer .footer-info .personal-info img {
+  margin: 0.5rem 0.5rem 0.5rem 0;
+}
+footer .footer-info .social-icons {
+  margin-top: 5rem;
+}
+footer .footer-info .social-icons a {
+  text-decoration: none;
+  color: #FFF;
+  margin-right: 1rem;
+  transition: color 300ms ease-in-out;
+}
+footer .footer-info .social-icons a:hover {
+  color: #00ccff;
+}
+footer .subscribe-info {
+  width: 30%;
+}
+footer .subscribe-info h3 {
+  margin: 1rem 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+footer .subscribe-info p {
+  width: 20vw;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+footer .subscribe-info input {
+  padding: 0.7rem 5rem 0.7rem 0.5rem;
+  margin: 1rem 0.5rem 1rem 0;
+  border: none;
+  border-radius: 8px;
+}
+footer .subscribe-info button {
+  padding: 0.7rem 2rem;
+  color: #FFFFFF;
+  background: #ff52bf;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 300ms ease-in-out;
+}
+footer .subscribe-info button:hover {
+  background-color: #ff8fd8;
+}
+
+@media (max-width: 1024px) {
+  footer {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  footer .footer-info {
+    margin: 4rem auto 2rem;
+    width: 100%;
+  }
+  footer .footer-info p {
+    width: 50vw;
+    margin: 1rem auto;
+  }
+  footer .footer-info .personal-info {
+    display: block;
+  }
+  footer .footer-info .personal-info p {
+    display: inline-block;
+    margin: 0 auto;
+  }
+  footer .footer-info .personal-info img {
+    margin: 0 0.5rem;
+    display: inline-block;
+  }
+  footer .subscribe-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  footer .subscribe-info p {
+    width: 60vw;
+    margin: 1rem auto;
+  }
+  footer .subscribe-info button {
+    width: max-content;
+    align-self: center;
+    margin-left: 8rem;
+  }
+}
+html {
+  scroll-snap-type: y mandatory;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  text-align: center;
+  line-height: 1.5;
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+/*# sourceMappingURL=home.css.map */
