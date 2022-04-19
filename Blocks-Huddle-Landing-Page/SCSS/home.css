@@ -93,7 +93,8 @@ header .heading__header-img img {
     flex-direction: column;
   }
   header .heading__header-text {
-    width: 90%;
+    width: 100%;
+    padding: 1rem;
   }
   header .heading__header-text h1 {
     font-size: 2rem;
