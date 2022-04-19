@@ -1,0 +1,28 @@
+@import "config", "header", "main", "footer";
+
+body {
+  line-height: 1.5;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.pink-button {
+  width: max-content;
+  font-size: 1.2rem;
+  border: none;
+  padding: 1.5rem 5rem;
+  border-radius: 50px;
+  background-color: $pink;
+  color: $very-pale-cyan;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 500ms all ease-in-out;
+
+  &:hover {
+    background-color: hsl(322, 100%, 80%);
+  }
+}
+@media (max-width: 1024px) {
+  .pink-button{
+    padding: 1rem 3rem;
+  }
+}
