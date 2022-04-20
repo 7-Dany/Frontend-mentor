@@ -1,0 +1,16 @@
+@import "config", "header", "main";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Epilogue', sans-serif;
+  background-color: $white;
+  line-height: 1.5;
+
+  &.open {
+    background: linear-gradient(90deg, $gray 30%, $gray 30%);
+  }
+}

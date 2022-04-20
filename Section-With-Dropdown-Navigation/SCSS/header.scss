@@ -1,0 +1,314 @@
+header {
+  .logo {
+    align-self: flex-end;
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  a {
+    font-weight: 500;
+    margin-right: 2.5rem;
+    text-decoration: none;
+    color: $gray;
+    transition: all 300ms ease-in-out;
+
+    &:hover {
+      color: $black;
+    }
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  nav {
+
+  }
+}
+
+
+@media (max-width: 1024px) {
+  header {
+    padding: 3rem;
+    width: 100%;
+
+    a {
+      margin: 0.5rem 0;
+    }
+
+    .menu-btn {
+      display: block;
+      position: absolute;
+      z-index: 1;
+      right: 3rem;
+      top: 3rem;
+      height: 20px;
+      width: 30px;
+      cursor: pointer;
+      background-color: $white;
+      transition: all 300ms ease-in-out;
+
+      &__burger {
+        position: absolute;
+        right: 0;
+        top: 0.5rem;
+        width: 28px;
+        height: 3px;
+        background-color: $black;
+        transition: all 300ms ease-in-out;
+
+        &::before {
+          width: 28px;
+          height: 3px;
+          content: "";
+          position: absolute;
+          top: -8px;
+          background-color: $black;
+          transition: all 300ms ease-in-out;
+        }
+
+        &::after {
+          width: 20px;
+          height: 3px;
+          content: "";
+          position: absolute;
+          top: 8px;
+          background-color: $black;
+          transition: all 300ms ease-in-out;
+        }
+
+        &.open-item {
+          transform: rotate(720deg);
+          background: #FFFFFF;
+
+          &::before {
+            transform: rotate(45deg) translate(5px, 8px);
+          }
+
+          &::after {
+            transform: rotate(-45deg) translate(3px, -6px);
+            width: 28px;
+          }
+        }
+      }
+    }
+
+    nav {
+      padding: 7rem 3rem;
+      position: fixed;
+      visibility: hidden;
+      display: none;
+      opacity: 1;
+      width: 70vw;
+      top: 0;
+      right: 0;
+      height: 100vh;
+
+      &.open {
+        display: flex;
+        flex-direction: column;
+        visibility: visible;
+        background-color: #FFFFFF;
+      }
+
+      .nav-links {
+        display: flex;
+        flex-direction: column;
+
+        .features {
+          margin: 0.5rem 0;
+
+          &__nav-items {
+            transform: translateX(150%);
+            padding: 1rem 0 1rem 1rem;
+            transition: transform 300ms linear;
+            position: absolute;
+
+            img {
+              margin-right: 0.3rem;
+            }
+
+            &.open {
+              transform: translateX(0);
+              position: static;
+              display: flex;
+              flex-direction: column;
+            }
+          }
+        }
+
+        .company {
+          margin: 0.5rem 0;
+
+          &__nav-items {
+            transform: translateX(400%);
+            padding: 1rem;
+            position: absolute;
+            transition: transform 400ms linear;
+
+            &.open {
+              transform: translateX(0);
+              display: flex;
+              flex-direction: column;
+              position: static;
+            }
+          }
+        }
+      }
+
+      .login {
+        margin-top: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .login-btn {
+          border: none;
+          font-size: 1.5rem;
+          padding: 0;
+          margin: 1rem 0;
+          background: #FFFFFF;
+          cursor: pointer;
+
+          &:hover {
+            color: $gray;
+          }
+        }
+
+        .register-btn {
+          font-size: 1.5rem;
+          margin: 1rem 0;
+          padding: 0;
+          background: #FFFFFF;
+          border: none;
+          cursor: pointer;
+
+          &:hover {
+            color: gray;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    padding: 3rem 5rem;
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .nav-links {
+        display: flex;
+        margin-left: 2.5rem;
+        position: relative;
+
+
+        .features {
+          &__nav-items {
+            transform: translateY(-150%);
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            position: absolute;
+            bottom: -11.5rem;
+            left: -5rem;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 5px 0 $gray;
+            background-color: #FFFFFF;
+            visibility: hidden;
+            transition: transform 300ms linear;
+
+            a {
+              margin: 0.3rem 0;
+            }
+
+            img {
+              object-fit: contain;
+              margin-inline: 0.5rem;
+            }
+
+            &.open {
+              visibility: visible;
+              transform: translateY(0);
+            }
+          }
+        }
+
+        .company {
+          &__nav-items {
+            transform: translateY(-150%);
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 5px 0 $gray;
+            background-color: #FFFFFF;
+            visibility: hidden;
+            transition: transform 300ms linear;
+            left: 7.8rem;
+            bottom: -9.5rem;
+
+            a {
+              margin: 0.3rem 0;
+            }
+
+            &.open {
+              visibility: visible;
+              transform: translateY(0);
+            }
+          }
+        }
+      }
+
+
+      .login {
+        margin-right: 2rem;
+
+        .login-btn {
+          margin-right: 3rem;
+          font-size: 1rem;
+          font-weight: 700;
+          border: none;
+          background-color: $white;
+          color: $gray;
+          cursor: pointer;
+          transition: all 300ms ease-in-out;
+
+          &:hover {
+            color: $black;
+          }
+
+        }
+
+        .register-btn {
+          font-size: 1rem;
+          font-weight: 700;
+          padding: 0.8rem 1.8rem;
+          background-color: $white;
+          border: 2px solid $gray;
+          border-radius: 10px;
+          color: $gray;
+          transition: all 300ms ease-in-out;
+          cursor: pointer;
+
+          &:hover {
+            border-color: $black;
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+}

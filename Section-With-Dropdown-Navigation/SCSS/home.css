@@ -1,0 +1,374 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+header .logo {
+  align-self: flex-end;
+}
+header .logo img {
+  object-fit: contain;
+}
+header a {
+  font-weight: 500;
+  margin-right: 2.5rem;
+  text-decoration: none;
+  color: dimgray;
+  transition: all 300ms ease-in-out;
+}
+header a:hover {
+  color: #141414;
+}
+header .menu-btn {
+  display: none;
+}
+@media (max-width: 1024px) {
+  header {
+    padding: 3rem;
+    width: 100%;
+  }
+  header a {
+    margin: 0.5rem 0;
+  }
+  header .menu-btn {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    right: 3rem;
+    top: 3rem;
+    height: 20px;
+    width: 30px;
+    cursor: pointer;
+    background-color: #fafafa;
+    transition: all 300ms ease-in-out;
+  }
+  header .menu-btn__burger {
+    position: absolute;
+    right: 0;
+    top: 0.5rem;
+    width: 28px;
+    height: 3px;
+    background-color: #141414;
+    transition: all 300ms ease-in-out;
+  }
+  header .menu-btn__burger::before {
+    width: 28px;
+    height: 3px;
+    content: "";
+    position: absolute;
+    top: -8px;
+    background-color: #141414;
+    transition: all 300ms ease-in-out;
+  }
+  header .menu-btn__burger::after {
+    width: 20px;
+    height: 3px;
+    content: "";
+    position: absolute;
+    top: 8px;
+    background-color: #141414;
+    transition: all 300ms ease-in-out;
+  }
+  header .menu-btn__burger.open-item {
+    transform: rotate(720deg);
+    background: #FFFFFF;
+  }
+  header .menu-btn__burger.open-item::before {
+    transform: rotate(45deg) translate(5px, 8px);
+  }
+  header .menu-btn__burger.open-item::after {
+    transform: rotate(-45deg) translate(3px, -6px);
+    width: 28px;
+  }
+  header nav {
+    padding: 7rem 3rem;
+    position: fixed;
+    visibility: hidden;
+    display: none;
+    opacity: 1;
+    width: 70vw;
+    top: 0;
+    right: 0;
+    height: 100vh;
+  }
+  header nav.open {
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+    background-color: #FFFFFF;
+  }
+  header nav .nav-links {
+    display: flex;
+    flex-direction: column;
+  }
+  header nav .nav-links .features {
+    margin: 0.5rem 0;
+  }
+  header nav .nav-links .features__nav-items {
+    transform: translateX(150%);
+    padding: 1rem 0 1rem 1rem;
+    transition: transform 300ms linear;
+    position: absolute;
+  }
+  header nav .nav-links .features__nav-items img {
+    margin-right: 0.3rem;
+  }
+  header nav .nav-links .features__nav-items.open {
+    transform: translateX(0);
+    position: static;
+    display: flex;
+    flex-direction: column;
+  }
+  header nav .nav-links .company {
+    margin: 0.5rem 0;
+  }
+  header nav .nav-links .company__nav-items {
+    transform: translateX(400%);
+    padding: 1rem;
+    position: absolute;
+    transition: transform 400ms linear;
+  }
+  header nav .nav-links .company__nav-items.open {
+    transform: translateX(0);
+    display: flex;
+    flex-direction: column;
+    position: static;
+  }
+  header nav .login {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header nav .login .login-btn {
+    border: none;
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 1rem 0;
+    background: #FFFFFF;
+    cursor: pointer;
+  }
+  header nav .login .login-btn:hover {
+    color: dimgray;
+  }
+  header nav .login .register-btn {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    padding: 0;
+    background: #FFFFFF;
+    border: none;
+    cursor: pointer;
+  }
+  header nav .login .register-btn:hover {
+    color: gray;
+  }
+}
+@media (min-width: 1024px) {
+  header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    padding: 3rem 5rem;
+  }
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header nav .nav-links {
+    display: flex;
+    margin-left: 2.5rem;
+    position: relative;
+  }
+  header nav .nav-links .features__nav-items {
+    transform: translateY(-150%);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    position: absolute;
+    bottom: -11.5rem;
+    left: -5rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 5px 0 dimgray;
+    background-color: #FFFFFF;
+    visibility: hidden;
+    transition: transform 300ms linear;
+  }
+  header nav .nav-links .features__nav-items a {
+    margin: 0.3rem 0;
+  }
+  header nav .nav-links .features__nav-items img {
+    object-fit: contain;
+    margin-inline: 0.5rem;
+  }
+  header nav .nav-links .features__nav-items.open {
+    visibility: visible;
+    transform: translateY(0);
+  }
+  header nav .nav-links .company__nav-items {
+    transform: translateY(-150%);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 5px 0 dimgray;
+    background-color: #FFFFFF;
+    visibility: hidden;
+    transition: transform 300ms linear;
+    left: 7.8rem;
+    bottom: -9.5rem;
+  }
+  header nav .nav-links .company__nav-items a {
+    margin: 0.3rem 0;
+  }
+  header nav .nav-links .company__nav-items.open {
+    visibility: visible;
+    transform: translateY(0);
+  }
+  header nav .login {
+    margin-right: 2rem;
+  }
+  header nav .login .login-btn {
+    margin-right: 3rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    background-color: #fafafa;
+    color: dimgray;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+  }
+  header nav .login .login-btn:hover {
+    color: #141414;
+  }
+  header nav .login .register-btn {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.8rem 1.8rem;
+    background-color: #fafafa;
+    border: 2px solid dimgray;
+    border-radius: 10px;
+    color: dimgray;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+  }
+  header nav .login .register-btn:hover {
+    border-color: #141414;
+    color: #141414;
+  }
+}
+main {
+  margin-top: 1rem;
+  height: 85vh;
+  padding: 6rem;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 75% 25%;
+  column-gap: 2rem;
+}
+main .app-header {
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+main .app-header h1 {
+  font-weight: 700;
+  font-size: 5rem;
+  color: #141414;
+}
+main .app-header p {
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: dimgray;
+}
+main .app-header button {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  width: max-content;
+  border-radius: 10px;
+  padding: 1.2rem 2rem;
+  color: #fafafa;
+  background-color: #141414;
+  border: 1px solid #141414;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+main .app-header button:hover {
+  color: #141414;
+  background-color: #fafafa;
+}
+main .app-image {
+  grid-row: 1/-1;
+  justify-self: center;
+}
+main .app-image img:nth-child(1) {
+  height: 100%;
+}
+main .app-image img:nth-child(2) {
+  display: none;
+}
+main .companies {
+  grid-row: 2/3;
+  align-self: flex-end;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+main .companies img {
+  object-fit: contain;
+}
+
+@media (max-width: 1024px) {
+  main {
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, auto);
+  }
+  main .app-header {
+    padding: 3rem;
+    margin-top: 4rem;
+    grid-row: 2/3;
+  }
+  main .app-header h1 {
+    font-size: 4rem;
+  }
+  main .app-header button {
+    margin: 1rem auto;
+  }
+  main .app-image {
+    width: 99%;
+    grid-row: 1/2;
+  }
+  main .app-image img:nth-child(1) {
+    display: none;
+  }
+  main .app-image img:nth-child(2) {
+    display: block;
+    width: 100%;
+  }
+  main .companies {
+    width: 100%;
+    margin: 1rem auto;
+    grid-row: 3/4;
+    justify-content: space-evenly;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Epilogue", sans-serif;
+  background-color: #fafafa;
+  line-height: 1.5;
+}
+body.open {
+  background: linear-gradient(90deg, dimgray 30%, dimgray 30%);
+}
+
+/*# sourceMappingURL=home.css.map */
