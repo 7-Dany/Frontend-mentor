@@ -103,7 +103,7 @@ header .menu-btn {
   header nav .nav-links .features__nav-items {
     transform: translateX(50rem);
     padding: 1rem 0 1rem 1rem;
-    transition: transform 300ms linear;
+    transition: transform 500ms linear;
     position: absolute;
   }
   header nav .nav-links .features__nav-items img {
@@ -122,7 +122,7 @@ header .menu-btn {
     transform: translateX(50rem);
     padding: 1rem;
     position: absolute;
-    transition: transform 300ms linear;
+    transition: transform 500ms linear;
   }
   header nav .nav-links .company__nav-items.open {
     transform: translateX(0);
