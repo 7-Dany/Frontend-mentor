@@ -37,12 +37,14 @@ menuBtn.addEventListener("click", function () {
     if (!showMenu) {
         body.classList.add("open")
         menuBtn.classList.add("open-item");
+        menuBtn.style.position = "fixed";
         menuBurger.classList.add("open-item");
         nav.classList.add("open");
         showMenu = true;
     } else {
         body.classList.remove("open")
         menuBtn.classList.remove("open-item");
+        menuBtn.style.position = "absolute";
         menuBurger.classList.remove("open-item");
         nav.classList.remove("open")
         showMenu = false;
