@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Challenge repo](https://github.com/Wa7dany/Frontend-mentor/tree/main/Section-With-Dropdown-Navigation)
+- Live Site URL: [Section with dropdown navigation](https://wa7dany.github.io/Frontend-mentor/Section-With-Dropdown-Navigation/section-with-dropdown-navigation.html)
 
 ## My process
 
