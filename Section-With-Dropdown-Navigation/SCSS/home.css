@@ -300,7 +300,7 @@ main .app-header button:hover {
 }
 main .app-image {
   grid-row: 1/-1;
-  justify-self: center;
+  justify-self: flex-end;
 }
 main .app-image img:nth-child(1) {
   height: 100%;
