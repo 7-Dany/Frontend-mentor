@@ -257,7 +257,7 @@ header .menu-btn {
   }
 }
 main {
-  width: 100%;
+  width: 100vw;
   margin-top: 1rem;
   height: 85vh;
   padding: 4rem;
