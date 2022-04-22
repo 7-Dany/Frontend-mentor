@@ -1,0 +1,301 @@
+main {
+  width: 100%;
+}
+
+#Features {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin: 2rem 0 0;
+  padding-bottom: 15rem;
+  background-image: url("../images/bg-curve-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100%;
+
+  .section-info {
+    text-align: center;
+
+    h1 {
+      font-size: 2rem;
+      margin: 1rem 0;
+      padding-inline: 1rem;
+    }
+
+    p {
+      margin: 1rem auto;
+      padding-inline: 1rem;
+    }
+
+    input {
+      width: 90%;
+      display: block;
+      margin: 1rem auto;
+      padding: 0.8rem 1rem;
+      font-size: 1rem;
+      font-weight: 400;
+      border-radius: 5px;
+      border: 2px solid $desaturated-blue;
+    }
+
+    button {
+      width: 90%;
+      border: none;
+      cursor: pointer;
+      padding: 0.8rem;
+      font-size: 1.5rem;
+      border-radius: 5px;
+      background-color: $bright-blue;
+      color: $grayish-blue;
+      box-shadow: 0 0 5px 3px $light-gray;
+      transition: 500ms all ease-in-out;
+
+      &:hover {
+        background-color: hsl(224, 93%, 65%);
+      }
+    }
+  }
+
+  .section-image {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+#Teams {
+  display: flex;
+  flex-direction: column-reverse;
+  padding-top: 3rem;
+  background-color: $grayish-blue;
+
+
+  .section-info {
+    margin-bottom: 3rem;
+
+    &__header {
+      h2 {
+        text-align: center;
+        font-size: 1.5rem;
+        margin: 3rem 0;
+      }
+
+      p {
+        padding-inline: 1rem;
+        margin: 2rem 0;
+      }
+
+      a {
+        width: max-content;
+        display: flex;
+        align-items: center;
+        margin: 2rem auto;
+        font-size: 1.2rem;
+        color: $moderate-cyan;
+        text-decoration: none;
+        border-bottom: 2px solid $moderate-cyan;
+        transition: all 500ms ease-in-out;
+
+        img {
+          width: 1.5rem;
+          margin-inline: 0.5rem;
+        }
+
+        &:hover {
+          color: hsl(170, 45%, 70%);
+          border-color: hsl(170, 45%, 70%);
+        }
+      }
+    }
+
+    .ceo-card {
+      width: 80%;
+      margin: 3rem auto;
+      background-color: #FFFFFF;
+      box-shadow: 0 0 5px 0 $light-gray;
+      border-radius: 5px;
+      padding: 1rem 2rem;
+
+      img {
+        margin: 1rem 0;
+      }
+
+      &__personal-info {
+        margin: 1rem 0 0;
+        display: flex;
+
+        img {
+          border-radius: 50%;
+          width: 15%;
+        }
+
+        p {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-inline: 1rem;
+          font-size: 0.8rem;
+
+          .ceo-name {
+            font-size: 1.2rem;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+          }
+        }
+
+      }
+    }
+  }
+
+  .section-image {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+#Sign-in {
+  background-color: $desaturated-blue;
+  text-align: center;
+  padding-top: 5rem;
+  color: $grayish-blue;
+
+  .section-info {
+    h2 {
+      margin: 1rem 0;
+    }
+
+    p {
+      margin: 2rem 0;
+      padding-inline: 2rem;
+    }
+
+    input {
+      width: 60%;
+      display: block;
+      margin: 1rem auto;
+      padding: 0.8rem 1rem;
+      border-radius: 5px;
+      border: 1px solid $desaturated-blue;
+      box-shadow: 0 0 1px 0 $light-gray;
+    }
+
+    button {
+      width: 60%;
+      border: none;
+      padding: 0.8rem 1rem;
+      margin-bottom: 5rem;
+      border-radius: 5px;
+      background-color: $bright-blue;
+      color: $grayish-blue;
+      cursor: pointer;
+      box-shadow: 0 0 1px 0 $light-gray;
+      transition: 500ms all ease-in-out;
+
+      &:hover {
+        background-color: hsl(224, 93%, 65%);
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  #Features {
+    flex-direction: row;
+    background-image: url("../images/bg-curve-desktop.svg");
+    padding-inline: 3rem;
+
+    .section-info {
+      text-align: left;
+
+      h1 {
+        padding: 0;
+      }
+
+      p {
+        padding: 0;
+      }
+
+      input {
+        display: inline-block;
+        width: 60%;
+        margin-right: 0.5rem;
+        padding: 0.9rem;
+      }
+
+      button {
+        display: inline-block;
+        width: 30%;
+        margin: 1rem 0;
+        padding: 0.68rem;
+      }
+    }
+  }
+  #Teams {
+    flex-direction: row;
+    align-items: center;
+    padding-inline: 3rem;
+    gap: 2rem;
+
+
+    .section-info {
+      &__header {
+        h2 {
+          text-align: left;
+          font-size: 2.5rem;
+        }
+
+        p {
+          padding: 0;
+        }
+      }
+
+      .ceo-card {
+        margin: 3rem 0;
+      }
+    }
+  }
+  #Sign-in {
+    padding: 3.5rem;
+
+    .section-info {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      text-align: left;
+
+      h1 {
+        grid-row: 1/2;
+      }
+
+      p {
+        grid-row: 2/3;
+        margin: 1rem 0 2rem;
+        width: 70%;
+        padding: 0;
+      }
+
+      label {
+        width: 60%;
+        align-self: flex-end;
+        justify-self: flex-start;
+      }
+
+      input {
+        width: 100%;
+        margin: 1rem 2rem;
+        grid-row: 1/2;
+        grid-column: 2/3;
+      }
+
+      button {
+        width: 40%;
+        grid-column: 2/3;
+        grid-row: 2/3;
+        justify-self: flex-start;
+        align-self: flex-start;
+        margin: 1rem 2rem;
+      }
+    }
+  }
+}
