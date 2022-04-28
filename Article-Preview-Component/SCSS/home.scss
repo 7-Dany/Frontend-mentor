@@ -1,0 +1,179 @@
+@import "config";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $light-grayish-blue;
+  color: $dark-grayish-blue;
+  line-height: 1.2;
+}
+
+main {
+  min-height: 50%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 60vw;
+  border-radius: 10px;
+  background-color: #FFF;
+}
+
+
+.image {
+  width: 100%;
+  border-radius: 10px 0 0 10px;
+  background: url("../images/drawers.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 2rem;
+
+  h1 {
+    margin: 1rem;
+    font-weight: 700;
+  }
+
+  p {
+    margin: 1rem;
+    color: $desaturated-blue;
+    font-weight: 500;
+  }
+}
+
+.personal-info {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+  position: relative;
+
+  p {
+    font-size: 1.2rem;
+    margin: 1rem;
+    font-weight: 700;
+
+    .date {
+      display: block;
+      font-size: 1rem;
+      color: $grayish-blue;
+      font-weight: 500;
+    }
+  }
+
+  .person {
+    width: 3.5rem;
+    border-radius: 50%;
+  }
+
+  .share-icon {
+    margin-right: 1rem;
+    padding: 0.7rem 0.8rem;
+    margin-left: auto;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: $light-grayish-blue;
+    cursor: pointer;
+    transition: 500ms all ease-in-out;
+
+    &.open {
+      background-color: $dark-grayish-blue;
+
+      img {
+        filter: brightness(0) invert(100%) sepia(100%) saturate(1%) hue-rotate(43deg) brightness(102%) contrast(101%);
+      }
+    }
+  }
+}
+
+.share {
+  visibility: hidden;
+  display: flex;
+  position: absolute;
+  top: -70px;
+  right: -113px;
+  background-color: $dark-grayish-blue;
+  color: $grayish-blue;
+  padding: 0.3rem 2.3rem;
+  border-radius: 15px;
+  opacity: 0;
+  transition: opacity 500ms linear, visibility 500ms linear;
+
+  .arrow {
+    display: block;
+    border: 20px solid transparent;
+    border-top-color: $dark-grayish-blue;
+    width: 0;
+    height: 0;
+    margin: 0;
+    position: absolute;
+    bottom: -35px;
+    right: 45%;
+    left: 45%;
+  }
+
+  img {
+    object-fit: contain;
+    margin-inline: 1rem;
+    cursor: pointer;
+  }
+
+  &.open {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 500ms linear;
+  }
+}
+
+@media (max-width: 1024px) {
+  main {
+    width: 90%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    border-radius: 10px;
+  }
+  .image {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+  .content {
+    padding-bottom: 0;
+    position: relative;
+  }
+  .personal-info {
+    position: static;
+    margin-bottom: 0;
+
+    .share-icon {
+      position: relative;
+      z-index: 2;
+
+      &.open {
+        background-color: $desaturated-blue;
+      }
+    }
+  }
+  .share {
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+    position: absolute;
+    top: unset;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    .arrow {
+      display: none;
+    }
+  }
+}
