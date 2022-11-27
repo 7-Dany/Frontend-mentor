@@ -1,16 +1,4 @@
-@mixin font($font-name, $font-file) {
-  @font-face {
-    font-family: $font-name;
-    src: url($font-file) format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-}
-
-@include font('inter-bold', '../assets/fonts/static/inter-Bold.ttf');
-@include font('inter-extra-bold', '../assets/fonts/static/inter-ExtraBold.ttf');
-@include font('inter-regular', '../assets/fonts/static/inter-Regular.ttf');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
 $soft-orange: hsl(35, 77%, 62%);
 $soft-red: hsl(5, 85%, 63%);
 $off-white: hsl(36, 100%, 99%);

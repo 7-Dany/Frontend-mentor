@@ -1,21 +1,4 @@
-@font-face {
-  font-family: "inter-bold";
-  src: url("../assets/fonts/static/inter-Bold.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "inter-extra-bold";
-  src: url("../assets/fonts/static/inter-ExtraBold.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "inter-regular";
-  src: url("../assets/fonts/static/inter-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
 * {
   box-sizing: border-box;
   padding: 0;
@@ -23,7 +6,7 @@
 }
 
 body {
-  font-family: "inter-regular", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 1rem;
   padding: 5rem;
@@ -84,7 +67,7 @@ main {
 }
 .main-section__header {
   font-size: 3rem;
-  font-family: "inter-extra-bold", sans-serif;
+  font-weight: 800;
 }
 .main-section__description {
   display: flex;
@@ -101,7 +84,8 @@ main {
   border: none;
   color: hsl(36deg, 100%, 99%);
   background-color: hsl(5deg, 85%, 63%);
-  font-family: "inter-bold", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
   font-size: 0.9rem;
   cursor: pointer;
   letter-spacing: 2px;
@@ -130,7 +114,7 @@ main {
 .side-section .new-news__title {
   color: hsl(36deg, 100%, 99%);
   margin: 1rem 0;
-  font-family: "inter-bold", sans-serif;
+  font-weight: 700;
   transition: 300ms all ease-in-out;
   font-size: 1rem;
 }
@@ -166,7 +150,7 @@ main {
 .article__title {
   grid-row: 2/3;
   font-size: 0.9rem;
-  font-family: "inter-bold", sans-serif;
+  font-weight: 700;
   transition: 300ms all ease-in-out;
 }
 .article__text {

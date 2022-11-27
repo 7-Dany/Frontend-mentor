@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: 'inter-regular', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 1rem;
   padding: 5rem;
@@ -75,7 +75,7 @@ main {
 
   &__header {
     font-size: 3rem;
-    font-family: 'inter-extra-bold', sans-serif;
+    font-weight: 800;
   }
 
   &__description {
@@ -95,7 +95,8 @@ main {
     border: none;
     color: $off-white;
     background-color: $soft-red;
-    font-family: 'inter-bold', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
     font-size: 0.9rem;
     cursor: pointer;
     letter-spacing: 2px;
@@ -127,7 +128,7 @@ main {
     &__title {
       color: $off-white;
       margin: 1rem 0;
-      font-family: 'inter-bold', sans-serif;
+      font-weight: 700;
       transition: 300ms all ease-in-out;
       font-size: 1rem;
     }
@@ -172,7 +173,7 @@ main {
   &__title {
     grid-row: 2/3;
     font-size: 0.9rem;
-    font-family: 'inter-bold', sans-serif;
+    font-weight: 700;
     transition: 300ms all ease-in-out;
   }
 
