@@ -1,0 +1,166 @@
+@use "config" as *;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  height: 100vh;
+  line-height: 1.5;
+  background: linear-gradient($linear-1);
+  overflow: hidden;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 5fr 4fr;
+  grid-template-rows: repeat(12, 1fr);
+  gap: 1.5rem;
+}
+
+.picture {
+  width: 100%;
+  height: 100%;
+  grid-column: 2/-1;
+  grid-row: 1/-1;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+}
+
+.logo {
+  grid-row: 1/2;
+  margin: 5rem 6rem;
+}
+
+.main-content {
+  grid-row: 2/-1;
+  margin-left: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__title {
+    font-size: 4.4rem;
+    letter-spacing: 8px;
+    color: $dark-grayish-red;
+    font-weight: 600;
+
+    span {
+      color: $desaturated-red;
+      font-weight: 300;
+      display: block;
+    }
+  }
+
+  &__description {
+    max-width: 80%;
+    margin: 1rem 0;
+    color: $desaturated-red;
+    font-size: 1rem;
+  }
+}
+
+.form {
+  margin: 4rem 0;
+
+  label {
+    position: relative;
+  }
+
+  &__email {
+    min-width: 80%;
+    border-radius: 30px;
+    height: 60px;
+    border: 1px solid $desaturated-red;
+    outline: none;
+    text-indent: 2rem;
+
+    &::placeholder {
+      color: $desaturated-red;
+      opacity: 0.6;
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 400;
+    }
+  }
+
+  &__error {
+    position: absolute;
+    right: 7rem;
+    bottom: 0;
+    visibility: hidden;
+  }
+
+  &__button {
+    height: 60px;
+    width: 120px;
+    border-radius: 30px;
+    position: absolute;
+    margin-left: -6rem;
+    border: none;
+    background: linear-gradient($linear-2);
+    cursor: pointer;
+  }
+
+  &__error-msg {
+    margin: 0.5rem 2rem;
+    color: $soft-red;
+    font-weight: 500;
+    visibility: hidden;
+  }
+
+  &.invalid-email {
+    .form__error, .form__error-msg {
+      visibility: visible;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  body {
+    overflow: auto;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo {
+    width: 150px;
+    height: 60px;
+    margin: 2rem;
+  }
+  .main-content {
+    margin: 2rem;
+    align-items: center;
+    text-align: center;
+
+    &__title {
+      font-size: 3rem;
+    }
+
+  }
+  .form {
+    width: 100%;
+
+    &__email {
+      min-width: 90%;
+    }
+
+    &__error {
+      right: 4rem;
+    }
+
+    &__button {
+      width: 80px;
+      margin-left: -3.5rem;
+    }
+  }
+}
