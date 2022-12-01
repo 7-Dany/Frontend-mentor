@@ -1,0 +1,152 @@
+@use "config" as *;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $very-dark-blue;
+  font-family: 'Overpass', sans-serif;
+}
+
+main {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  border-radius: 25px;
+  background-color: $dark-blue;
+}
+
+.rating-state {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+
+  &__star {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 1rem;
+    background-color: $medium-blue;
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+    color: $white;
+  }
+
+  &__text {
+    margin-bottom: 1.5rem;
+    color: $medium-gray;
+    font-weight: 500;
+  }
+
+  &__rate-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  &__rating-number {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $medium-blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    color: $medium-gray;
+    font-weight: 700;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    transition: 500ms all ease-in-out;
+
+    &.active {
+      background-color: $orange;
+      color: $white;
+    }
+
+    &:hover {
+      background-color: $light-gray;
+      color: $white;
+    }
+  }
+
+  &__submit {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    background-color: $orange;
+    cursor: pointer;
+    color: $white;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: 500ms all ease-in-out;
+
+    &:hover {
+      background-color: $white;
+      color: $orange;
+    }
+  }
+
+  &.disable {
+    display: none;
+  }
+}
+
+.thanking-state {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 2.2rem;
+
+  &__image {
+    width: 160px;
+    margin-bottom: 0.5rem;
+  }
+
+  &__selection-text {
+    margin-top: 1rem;
+    background-color: $medium-blue;
+    padding: 0.5rem 1rem;
+    color: $orange;
+    border-radius: 25px;
+    font-size: 0.9rem;
+  }
+
+  &__title {
+    margin-top: 2rem;
+    color: $white;
+  }
+
+  &__text {
+    margin-top: 1.5rem;
+    color: $medium-gray;
+  }
+
+  &.active {
+    display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    width: 90%;
+    height: max-content;
+  }
+}

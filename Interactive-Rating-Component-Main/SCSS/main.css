@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(216deg, 12%, 8%);
+  font-family: "Overpass", sans-serif;
+}
+
+main {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  border-radius: 25px;
+  background-color: hsl(213deg, 19%, 15%);
+}
+
+.rating-state {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+.rating-state__star {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 1rem;
+  background-color: hsl(213deg, 19%, 21%);
+  margin-bottom: 2rem;
+}
+.rating-state__title {
+  margin-bottom: 1rem;
+  color: hsl(0deg, 0%, 100%);
+}
+.rating-state__text {
+  margin-bottom: 1.5rem;
+  color: hsl(216deg, 12%, 54%);
+  font-weight: 500;
+}
+.rating-state__rate-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.rating-state__rating-number {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: hsl(213deg, 19%, 21%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  color: hsl(216deg, 12%, 54%);
+  font-weight: 700;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  transition: 500ms all ease-in-out;
+}
+.rating-state__rating-number.active {
+  background-color: hsl(25deg, 97%, 53%);
+  color: hsl(0deg, 0%, 100%);
+}
+.rating-state__rating-number:hover {
+  background-color: hsl(217deg, 12%, 63%);
+  color: hsl(0deg, 0%, 100%);
+}
+.rating-state__submit {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  background-color: hsl(25deg, 97%, 53%);
+  cursor: pointer;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  transition: 500ms all ease-in-out;
+}
+.rating-state__submit:hover {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(25deg, 97%, 53%);
+}
+.rating-state.disable {
+  display: none;
+}
+
+.thanking-state {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 2.2rem;
+}
+.thanking-state__image {
+  width: 160px;
+  margin-bottom: 0.5rem;
+}
+.thanking-state__selection-text {
+  margin-top: 1rem;
+  background-color: hsl(213deg, 19%, 21%);
+  padding: 0.5rem 1rem;
+  color: hsl(25deg, 97%, 53%);
+  border-radius: 25px;
+  font-size: 0.9rem;
+}
+.thanking-state__title {
+  margin-top: 2rem;
+  color: hsl(0deg, 0%, 100%);
+}
+.thanking-state__text {
+  margin-top: 1.5rem;
+  color: hsl(216deg, 12%, 54%);
+}
+.thanking-state.active {
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  main {
+    width: 90%;
+    height: max-content;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
