@@ -1,0 +1,191 @@
+@use "config" as *;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient($linear);
+  position: relative;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+main {
+  width: 1000px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background-color: white;
+  position: relative;
+  border-radius: 30px;
+  box-shadow: 0 20px 20px 10px rgb(0 0 0 / 15%);
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  grid-column: 1/2;
+
+  &__box {
+    position: absolute;
+    top: 14.4rem;
+    left: -8rem;
+  }
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+
+  &__pattern {
+    width: 200%;
+    position: absolute;
+    left: -37rem;
+    top: -19rem;
+  }
+
+  &__illustration {
+    width: 100%;
+    position: absolute;
+    top: 5rem;
+    left: -5.5rem;
+    z-index: 1;
+  }
+}
+
+.faq {
+  padding-right: 6rem;
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: $dark-desaturated-blue;
+  }
+}
+
+.question {
+  width: 100%;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid $divider;
+  cursor: pointer;
+
+  &__title {
+    font-size: 1rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $very-dark-grayish-blue;
+  }
+
+  &__text {
+    font-size: 0.75rem;
+    display: none;
+    margin: 1rem 0 0;
+    max-width: 90%;
+    color: hsl(240, 6%, 50%);
+  }
+
+  &__arrow {
+    transition: 300ms all ease-in-out;
+  }
+
+  &:hover {
+    .question__title {
+      color: $soft-red;
+    }
+  }
+
+  &.active {
+    .question {
+      &__title {
+        font-weight: 700;
+        color: $dark-desaturated-blue;
+      }
+
+      &__text {
+        display: block;
+      }
+
+      &__arrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+@media (min-width: 950px) and (max-width: 1200px) {
+  main {
+    width: 800px;
+    height: 550px;
+  }
+  .image-container__box {
+    top: 12.4rem;
+    left: -8rem;
+  }
+  .image {
+    &__pattern {
+      left: -29rem;
+      top: -14rem;
+    }
+
+    &__illustration {
+      top: 6rem;
+      left: -3.9rem;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  body {
+    padding: 5rem 2rem 0;
+    justify-content: center;
+    align-items: center;
+  }
+  main {
+    width: 350px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2rem 3rem;
+  }
+  .image-container__box {
+    display: none;
+  }
+  .image {
+    width: 100%;
+    height: 100px;
+    overflow: visible;
+
+    &__pattern {
+      width: 90%;
+      left: 1rem;
+      top: -2rem;
+    }
+
+    &__illustration {
+      width: 90%;
+      top: -9.3rem;
+      left: 1rem;
+    }
+  }
+  .faq {
+    padding-right: 0;
+  }
+  .question {
+    &__title {
+      gap: 2rem;
+    }
+  }
+}
