@@ -1,0 +1,198 @@
+@use "config" as *;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url("../images/bg-intro-desktop.png"), $red;
+  color: white;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10rem;
+  gap: 2rem;
+}
+
+.header {
+  &__title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+
+  &__text {
+
+  }
+}
+
+.sign-in {
+  min-width: 520px;
+  max-width: 600px;
+  text-align: center;
+
+  &__title {
+    font-size: 1rem;
+    font-weight: 300;
+    background-color: $blue;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: $dark-blue 1.95px 1.95px 2.6px;
+  }
+
+  &__bold-title {
+    font-weight: 700;
+  }
+}
+
+.sign-in-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: $dark-blue 1.95px 1.95px 2.6px;
+
+  &__fieldset {
+    border: none;
+    position: relative;
+
+    &.error {
+      .sign-in-form__input {
+        border: 2px solid $red;
+
+        &::placeholder {
+          visibility: hidden;
+        }
+      }
+
+      .sign-in-form__error-img {
+        display: block;
+      }
+
+      .sign-in-form__error-msg {
+        display: block;
+      }
+    }
+
+    &.error-email {
+      @extend .error;
+
+      .sign-in-form__input {
+        &::placeholder {
+          color: $red;
+          visibility: visible;
+          opacity: 1;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  &__label {
+    width: 100%;
+  }
+
+  &__input {
+    width: 100%;
+    height: 50px;
+    text-indent: 1rem;
+    border: 1px solid $grayish-blue;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+
+    &::placeholder {
+      color: $dark-blue;
+      opacity: 0.5;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+    }
+  }
+
+  &__error-img {
+    display: none;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 15px;
+    right: 1rem;
+  }
+
+  &__error-msg {
+    display: none;
+    color: $red;
+    text-align: right;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 0.8rem;
+  }
+
+  &__submit {
+    height: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: white;
+    background-color: $green;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    transition: 300ms all ease-in-out;
+    box-shadow: $dark-blue 1.95px 1.95px 2.6px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__tas {
+    font-size: 0.8rem;
+    width: 100%;
+    padding: 0 0.7rem;
+    color: $grayish-blue;
+  }
+
+  &__tas-text {
+    text-decoration: none;
+    color: $red;
+    font-weight: 600;
+    margin: 0 0.2rem;
+  }
+}
+
+@media (max-width: 1300px) {
+  main {
+    padding: 6rem;
+  }
+}
+
+@media (max-width: 950px) {
+  body {
+    height: 100%;
+  }
+  main {
+    flex-direction: column;
+    padding: 2rem;
+  }
+  .sign-in {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+}

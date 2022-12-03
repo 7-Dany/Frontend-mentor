@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url("../images/bg-intro-desktop.png"), hsl(0deg, 100%, 74%);
+  color: white;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10rem;
+  gap: 2rem;
+}
+
+.header__title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.sign-in {
+  min-width: 520px;
+  max-width: 600px;
+  text-align: center;
+}
+.sign-in__title {
+  font-size: 1rem;
+  font-weight: 300;
+  background-color: hsl(248deg, 32%, 49%);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: hsl(249deg, 10%, 26%) 1.95px 1.95px 2.6px;
+}
+.sign-in__bold-title {
+  font-weight: 700;
+}
+
+.sign-in-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: hsl(249deg, 10%, 26%) 1.95px 1.95px 2.6px;
+}
+.sign-in-form__fieldset {
+  border: none;
+  position: relative;
+}
+.sign-in-form__fieldset.error .sign-in-form__input, .sign-in-form__fieldset.error-email .sign-in-form__input {
+  border: 2px solid hsl(0deg, 100%, 74%);
+}
+.sign-in-form__fieldset.error .sign-in-form__input::placeholder, .sign-in-form__fieldset.error-email .sign-in-form__input::placeholder {
+  visibility: hidden;
+}
+.sign-in-form__fieldset.error .sign-in-form__error-img, .sign-in-form__fieldset.error-email .sign-in-form__error-img {
+  display: block;
+}
+.sign-in-form__fieldset.error .sign-in-form__error-msg, .sign-in-form__fieldset.error-email .sign-in-form__error-msg {
+  display: block;
+}
+.sign-in-form__fieldset.error-email .sign-in-form__input::placeholder {
+  color: hsl(0deg, 100%, 74%);
+  visibility: visible;
+  opacity: 1;
+  font-weight: 600;
+}
+.sign-in-form__label {
+  width: 100%;
+}
+.sign-in-form__input {
+  width: 100%;
+  height: 50px;
+  text-indent: 1rem;
+  border: 1px solid hsl(246deg, 25%, 90%);
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+.sign-in-form__input::placeholder {
+  color: hsl(249deg, 10%, 26%);
+  opacity: 0.5;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+.sign-in-form__error-img {
+  display: none;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: 15px;
+  right: 1rem;
+}
+.sign-in-form__error-msg {
+  display: none;
+  color: hsl(0deg, 100%, 74%);
+  text-align: right;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+.sign-in-form__submit {
+  height: 50px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: white;
+  background-color: hsl(154deg, 59%, 51%);
+  border: none;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  transition: 300ms all ease-in-out;
+  box-shadow: hsl(249deg, 10%, 26%) 1.95px 1.95px 2.6px;
+}
+.sign-in-form__submit:hover {
+  opacity: 0.8;
+}
+.sign-in-form__tas {
+  font-size: 0.8rem;
+  width: 100%;
+  padding: 0 0.7rem;
+  color: hsl(246deg, 25%, 90%);
+}
+.sign-in-form__tas-text {
+  text-decoration: none;
+  color: hsl(0deg, 100%, 74%);
+  font-weight: 600;
+  margin: 0 0.2rem;
+}
+
+@media (max-width: 1300px) {
+  main {
+    padding: 6rem;
+  }
+}
+@media (max-width: 950px) {
+  body {
+    height: 100%;
+  }
+  main {
+    flex-direction: column;
+    padding: 2rem;
+  }
+  .sign-in {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
