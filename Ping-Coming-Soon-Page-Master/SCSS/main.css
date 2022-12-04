@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 1.25rem;
+  padding: 4rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header__title {
+  color: hsl(0deg, 0%, 59%);
+  font-weight: 300;
+  margin: 2rem 0 1rem;
+  font-size: 3rem;
+}
+.header__title-bold {
+  color: hsl(209deg, 33%, 12%);
+  font-weight: 700;
+}
+main {
+  margin: 2rem 0 auto;
+}
+main img {
+  width: 600px;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+.form__fieldset {
+  border: none;
+}
+.form__fieldset.error .form__input {
+  border-color: hsl(354deg, 100%, 66%);
+}
+.form__fieldset.error .form__input::placeholder {
+  color: hsl(354deg, 100%, 66%);
+  font-weight: 300;
+  font-size: 1rem;
+}
+.form__fieldset.error .form__error-msg {
+  display: block;
+}
+.form__label {
+  width: 100%;
+}
+.form__input {
+  width: 400px;
+  height: 50px;
+  border: 1px solid hsl(223deg, 100%, 88%);
+  border-radius: 25px;
+  outline: hsl(223deg, 100%, 88%);
+  text-indent: 1.25rem;
+  font-size: 1.25rem;
+}
+.form__input::placeholder {
+  font-size: 1rem;
+  font-weight: 300;
+  opacity: 0.5;
+  color: hsl(0deg, 0%, 59%);
+}
+.form__error-msg {
+  display: none;
+  padding-left: 1.25rem;
+  font-size: 0.8rem;
+  font-weight: 300;
+  margin-top: 0.5rem;
+  color: hsl(354deg, 100%, 66%);
+  font-style: italic;
+}
+.form__submit {
+  background: hsl(223deg, 87%, 63%);
+  width: 160px;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  align-self: flex-start;
+  font-weight: 600;
+  font-family: "Libre Franklin", sans-serif;
+  cursor: pointer;
+  transition: 300ms all ease-in-out;
+}
+.form__submit:hover {
+  opacity: 0.8;
+}
+
+footer .icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem;
+}
+footer .icons a {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid hsl(0deg, 0%, 90%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: hsl(223deg, 87%, 63%);
+  aspect-ratio: 1/1;
+  transition: 300ms all ease-in-out;
+  cursor: pointer;
+}
+footer .icons a:hover {
+  color: white;
+  background-color: hsl(223deg, 87%, 63%);
+}
+footer p {
+  font-size: 0.8rem;
+  color: hsl(0deg, 0%, 59%);
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 2rem;
+  }
+  .header__title {
+    font-size: 1.8rem;
+  }
+  main {
+    width: 100%;
+  }
+  main img {
+    width: 100%;
+  }
+  .form {
+    flex-direction: column;
+  }
+  .form__fieldset {
+    width: 80%;
+  }
+  .form__label {
+    width: 100%;
+  }
+  .form__input {
+    width: 100%;
+  }
+  .form__submit {
+    width: 80%;
+    align-self: center;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

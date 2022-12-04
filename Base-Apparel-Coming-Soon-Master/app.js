@@ -8,5 +8,3 @@ form.addEventListener("submit", (event) => {
     form.classList.remove('invalid-email')
   }
 })
-
-const array = [1, 2, 3]

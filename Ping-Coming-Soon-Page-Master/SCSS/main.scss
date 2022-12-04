@@ -1,0 +1,198 @@
+@use "config" as *;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 1.25rem;
+  padding: 4rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__image {
+  }
+
+  &__title {
+    color: $gray;
+    font-weight: 300;
+    margin: 2rem 0 1rem;
+    font-size: 3rem;
+  }
+
+  &__title-bold {
+    color: $very-dark-blue;
+    font-weight: 700;
+  }
+
+  &__text {
+  }
+}
+
+main {
+  margin: 2rem 0 auto;
+
+  img {
+    width: 600px;
+  }
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+
+  &__fieldset {
+    border: none;
+
+    &.error {
+      .form__input {
+        border-color: $light-red;
+
+        &::placeholder {
+          color: $light-red;
+          font-weight: 300;
+          font-size: 1rem;
+        }
+      }
+
+      .form__error-msg {
+        display: block;
+      }
+    }
+  }
+
+  &__label {
+    width: 100%;
+  }
+
+  &__input {
+    width: 400px;
+    height: 50px;
+    border: 1px solid $pale-blue;
+    border-radius: 25px;
+    outline: $pale-blue;
+    text-indent: 1.25rem;
+    font-size: 1.25rem;
+
+    &::placeholder {
+      font-size: 1rem;
+      font-weight: 300;
+      opacity: 0.5;
+      color: $gray;
+    }
+  }
+
+  &__error-msg {
+    display: none;
+    padding-left: 1.25rem;
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin-top: 0.5rem;
+    color: $light-red;
+    font-style: italic;
+  }
+
+  &__submit {
+    background: $blue;
+    width: 160px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    align-self: flex-start;
+    font-weight: 600;
+    font-family: 'Libre Franklin', sans-serif;
+    cursor: pointer;
+    transition: 300ms all ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+footer {
+  .icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem;
+
+    a {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1px solid hsl(0, 0%, 90%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: $blue;
+      aspect-ratio: 1/1;
+      transition: 300ms all ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        color: white;
+        background-color: $blue;
+      }
+    }
+  }
+
+  p {
+    font-size: 0.8rem;
+    color: $gray;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 2rem;
+  }
+  .header__title {
+    font-size: 1.8rem;
+  }
+  main {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+  .form {
+    flex-direction: column;
+
+    &__fieldset {
+      width: 80%;
+    }
+
+    &__label {
+      width: 100%;
+    }
+
+    &__input {
+      width: 100%;
+    }
+
+    &__submit {
+      width: 80%;
+      align-self: center;
+    }
+  }
+}
