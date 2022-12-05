@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Notifications page</title>
+  <link rel="stylesheet" href="./SCSS/main.css">
+</head>
+<body>
+<main>
+  <div class="header">
+    <h1 class="header__title">Notifications <span class="header__count">3</span></h1>
+    <button class="header__button">Mark all as read</button>
+  </div>
+  <section>
+    <div class="user-card new">
+      <img src="./assets/images/avatar-mark-webber.webp" alt="Mark Webber" class="user-card__image">
+      <p class="user-card__info">
+        <span class="user-card__name">Mark Webber</span>
+        <span class="user-card__description">reacted to your recent post</span>
+        <span class="user-card__description-info">My first tournament today!</span>
+      </p>
+      <p class="user-card__date">1m ago</p>
+    </div>
+    <div class="user-card new">
+      <img src="./assets/images/avatar-angela-gray.webp" alt="Angela Gray" class="user-card__image">
+      <p class="user-card__info">
+        <span class="user-card__name">Angela Gray</span>
+        <span class="user-card__description">followed you</span>
+      </p>
+      <p class="user-card__date">5m ago</p>
+    </div>
+    <div class="user-card new">
+      <img src="./assets/images/avatar-jacob-thompson.webp" alt="Jacob Thompson" class="user-card__image">
+      <p class="user-card__info">
+        <span class="user-card__name">Jacob Thompson</span>
+        <span class="user-card__description">has joined your group </span>
+        <span class="user-card__description-info">Chess Club</span>
+      </p>
+      <p class="user-card__date">1 day ago</p>
+    </div>
+    <div class="user-card">
+      <img src="./assets/images/avatar-rizky-hasanuddin.webp" alt="Rizky Hasanuddin" class="user-card__image">
+      <p class="user-card__info">
+        <span class="user-card__name">Rizky Hasanuddin</span>
+        <span class="user-card__description">sent you a private message</span>
+      </p>
+      <p class="user-card__date">5 days ago</p>
+      <p class="user-card__details">
+        Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and
+        I'm already having lots of fun and improving my game.
+      </p>
+    </div>
+    <div class="user-card">
+      <img src="./assets/images/avatar-kimberly-smith.webp" alt="Kimberly Smith" class="user-card__image">
+      <p class="user-card__info">
+        <span class="user-card__name">Kimberly Smith</span>
+        <span class="user-card__description">commented on your picture</span>
+      </p>
+      <p class="user-card__date">1 week ago</p>
+      <img src="./assets/images/image-chess.webp" alt="chess" class="user-card__user-image">
+    </div>
+    <div class="user-card">
+      <img src="./assets/images/avatar-nathan-peterson.webp" alt="Nathan Peterson" class="user-card__image">
+      <p class="user-card__info">
+        <span class="user-card__name">Nathan Peterson</span>
+        <span class="user-card__description">reacted to your recent post</span>
+        <span class="user-card__description-info">5 end-game strategies to increase your win rate</span>
+      <p class="user-card__date">2 weeks ago</p>
+    </div>
+    <div class="user-card">
+      <img src="./assets/images/avatar-anna-kim.webp" alt="Anna Kim" class="user-card__image">
+      <p class="user-card__info">
+        <span class="user-card__name">Anna Kim</span>
+        <span class="user-card__description">left the group</span>
+        <span class="user-card__description-info">Chess Club</span>
+      <p class="user-card__date">2 weeks ago</p>
+    </div>
+  </section>
+</main>
+<script src="App.js"></script>
+</body>
+</html>
