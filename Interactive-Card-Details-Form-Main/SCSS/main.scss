@@ -296,11 +296,14 @@ label {
 }
 
 @media (max-width: 900px) {
+  body {
+    height: 100%;
+  }
   main {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 1.5fr 2fr;
     background-image: url("../images/bg-main-mobile.png");
     background-size: 100% 30%;
     align-items: center;
