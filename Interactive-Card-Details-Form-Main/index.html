@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="stylesheet" href="SCSS/main.css">
+</head>
+<body>
+<main>
+  <div class="front-card">
+    <img src="images/card-logo.svg" alt="" aria-hidden="true" class="front-card__logo">
+    <p class="front-card__card-numbers">0000 0000 0000 0000</p>
+    <p class="front-card__user-name">Jane Appleseed</p>
+    <p class="front-card__expire-date">
+      <span id="month">00</span>/<span id="year">00</span>
+    </p>
+  </div>
+  <div class="back-card">
+    <p class="back-card__security-number">000</p>
+  </div>
+  <div class="card-form">
+    <form class="visa-form">
+      <fieldset class="visa-form__name-fieldset">
+        <label for="name" class="visa-form__name-label">Cardholder Name</label>
+        <input type="text" id="name" name="name" class="visa-form__name-input" placeholder="e.g. Jane Appleseed">
+        <p class="visa-form__name-error">Can't be blank</p>
+      </fieldset>
+      <fieldset class="visa-form__card-number-fieldset">
+        <label for="card-number" class="visa-form__card-number-label">Card Number</label>
+        <input type="text" id="card-number" name="card-number" class="visa-form__card-number-input"
+               placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
+        <p class="visa-form__card-number-error">Can't be blank</p>
+      </fieldset>
+      <fieldset class="visa-form__expire-date-fieldset">
+        <h2 class="visa-form__expire-date-title">Exp. Date </h2>
+        <label for="month-number" class="visa-form__expire-date-label">(MM/</label>
+        <label for="year-number" class="visa-form__expire-date-label">YY)</label><br>
+        <input type="number" id="month-number" name="month-number" class="visa-form__expire-date-month-input"
+               placeholder="MM" min="1" max="12">
+        <input type="number" id="year-number" name="year-number" class="visa-form__expire-date-year-input"
+               placeholder="YY" min="1" max="99">
+        <p class="visa-form__expire-date-error">Can't be blank</p>
+      </fieldset>
+      <fieldset class="visa-form__security-number-fieldset">
+        <label for="security-number" class="visa-form__security-number-label">CVC</label>
+        <input type="number" id="security-number" name="security-number" class="visa-form__security-number-input"
+               placeholder="e.g. 123" min="000" max="999">
+        <p class="visa-form__security-number-error">Can't be blank</p>
+      </fieldset>
+      <button type="submit" class="visa-form__submit">Confirm</button>
+    </form>
+    <div class="form-success">
+      <img src="./images/icon-complete.svg" alt="Complete" class="form-success__image">
+      <h2 class="form-success__title">Thank you!</h2>
+      <p class="form-success__text">We've added your card details</p>
+      <button class="form-success__button">Continue</button>
+    </div>
+  </div>
+</main>
+<script src="App.js"></script>
+</body>
+</html>

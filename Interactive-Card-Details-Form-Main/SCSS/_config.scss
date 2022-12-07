@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+$linear: 90deg, hsl(249, 99%, 64%), hsl(278, 94%, 30%);
+$red: hsl(0, 100%, 66%);
+$white: hsl(0, 0%, 100%);
+$light-grayish-violet: hsl(270, 3%, 87%);
+$dark-grayish-violet: hsl(279, 6%, 55%);
+$very-dark-violet: hsl(278, 68%, 11%);
+
+%card-size {
+  width: 447px;
+  height: 245px;
+  border-radius: 12px;
+  padding: 2rem;
+  background-size: 100% 100%;
+}
+
+%label-style {
+  margin: 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+%error-msg {
+  color: $red;
+  font-size: 0.8rem;
+  visibility: hidden;
+  margin-top: 0.3rem;
+}
+
+%number-input {
+  -moz-appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+@mixin input-style($width) {
+  width: $width;
+  height: 45px;
+  border: 1px solid $light-grayish-violet;
+  border-radius: 8px;
+  text-indent: 1rem;
+
+  &::placeholder {
+    font-size: 1.125rem;
+    color: $light-grayish-violet;
+  }
+}
+
+@mixin error($name, $input) {
+  @if ($input == null) {
+    .visa-form__#{$name}-error {
+      visibility: visible;
+    }
+    .visa-form__#{$name}-input {
+      border-color: $red;
+    }
+  } @else {
+    .visa-form__#{$name}-error {
+      visibility: visible;
+    }
+    .visa-form__#{$input}-input {
+      border-color: $red;
+    }
+  }
+}

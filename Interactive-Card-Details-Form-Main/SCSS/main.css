@@ -1,0 +1,390 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+.front-card, .back-card {
+  width: 447px;
+  height: 245px;
+  border-radius: 12px;
+  padding: 2rem;
+  background-size: 100% 100%;
+}
+
+.visa-form__name-label, .visa-form__card-number-label, .visa-form__expire-date-label, .visa-form__security-number-label {
+  margin: 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.visa-form__name-error, .visa-form__card-number-error, .visa-form__expire-date-error, .visa-form__security-number-error {
+  color: hsl(0deg, 100%, 66%);
+  font-size: 0.8rem;
+  visibility: hidden;
+  margin-top: 0.3rem;
+}
+
+.visa-form__expire-date-month-input, .visa-form__expire-date-year-input, .visa-form__security-number-input {
+  -moz-appearance: textfield;
+}
+.visa-form__expire-date-month-input::-webkit-outer-spin-button, .visa-form__expire-date-year-input::-webkit-outer-spin-button, .visa-form__security-number-input::-webkit-outer-spin-button, .visa-form__expire-date-month-input::-webkit-inner-spin-button, .visa-form__expire-date-year-input::-webkit-inner-spin-button, .visa-form__security-number-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.125rem;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/bg-main-desktop.png");
+  background-repeat: no-repeat;
+  background-size: 30% 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+.front-card {
+  background-image: url("../images/bg-card-front.png");
+  color: hsl(0deg, 0%, 100%);
+  align-self: flex-end;
+  justify-self: center;
+}
+.front-card__logo {
+  margin-bottom: 3rem;
+}
+.front-card__card-numbers {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+.front-card__user-name {
+  display: inline-block;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+.front-card__expire-date {
+  display: inline-block;
+  float: right;
+  font-size: 1rem;
+}
+
+.back-card {
+  grid-column: 1/2;
+  background-image: url("../images/bg-card-back.png");
+  align-self: flex-start;
+  justify-self: flex-end;
+  margin-right: calc(40% - 223.5px);
+  position: relative;
+}
+.back-card__security-number {
+  position: absolute;
+  top: 6.9rem;
+  right: 3.5rem;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  color: hsl(0deg, 0%, 100%);
+}
+
+.card-form {
+  width: 80%;
+  height: 100%;
+  grid-column: 2/3;
+  grid-row: 1/-1;
+  justify-self: center;
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+fieldset {
+  border: none;
+}
+
+label {
+  display: block;
+}
+
+.visa-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  /* Name Input */
+  /* Card number */
+  /* Expire date */
+  /* Security number */
+  /* Submit */
+}
+.visa-form.success {
+  display: none;
+}
+.visa-form__name-fieldset {
+  grid-column: 1/-1;
+}
+.visa-form__name-fieldset.error .visa-form__name-error {
+  visibility: visible;
+}
+.visa-form__name-fieldset.error .visa-form__name-input {
+  border-color: hsl(0deg, 100%, 66%);
+}
+.visa-form__name-input {
+  width: 100%;
+  height: 45px;
+  border: 1px solid hsl(270deg, 3%, 87%);
+  border-radius: 8px;
+  text-indent: 1rem;
+}
+.visa-form__name-input::placeholder {
+  font-size: 1.125rem;
+  color: hsl(270deg, 3%, 87%);
+}
+.visa-form__card-number-fieldset {
+  grid-column: 1/-1;
+}
+.visa-form__card-number-fieldset.error .visa-form__card-number-error {
+  visibility: visible;
+}
+.visa-form__card-number-fieldset.error .visa-form__card-number-input {
+  border-color: hsl(0deg, 100%, 66%);
+}
+.visa-form__card-number-input {
+  width: 100%;
+  height: 45px;
+  border: 1px solid hsl(270deg, 3%, 87%);
+  border-radius: 8px;
+  text-indent: 1rem;
+}
+.visa-form__card-number-input::placeholder {
+  font-size: 1.125rem;
+  color: hsl(270deg, 3%, 87%);
+}
+.visa-form__expire-date-fieldset {
+  grid-column: 1/2;
+}
+.visa-form__expire-date-fieldset.error-month .visa-form__expire-date-error {
+  visibility: visible;
+}
+.visa-form__expire-date-fieldset.error-month .visa-form__expire-date-month-input {
+  border-color: hsl(0deg, 100%, 66%);
+}
+.visa-form__expire-date-fieldset.error-year .visa-form__expire-date-error {
+  visibility: visible;
+}
+.visa-form__expire-date-fieldset.error-year .visa-form__expire-date-year-input {
+  border-color: hsl(0deg, 100%, 66%);
+}
+.visa-form__expire-date-fieldset.error .visa-form__expire-date-error {
+  visibility: visible;
+}
+.visa-form__expire-date-fieldset.error .visa-form__expire-date-year-input {
+  border-color: hsl(0deg, 100%, 66%);
+}
+.visa-form__expire-date-fieldset.error .visa-form__expire-date-error {
+  visibility: visible;
+}
+.visa-form__expire-date-fieldset.error .visa-form__expire-date-month-input {
+  border-color: hsl(0deg, 100%, 66%);
+}
+.visa-form__expire-date-title {
+  display: inline-block;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.visa-form__expire-date-label {
+  display: inline-block;
+}
+.visa-form__expire-date-month-input {
+  width: 40%;
+  height: 45px;
+  border: 1px solid hsl(270deg, 3%, 87%);
+  border-radius: 8px;
+  text-indent: 1rem;
+  margin-right: 1rem;
+}
+.visa-form__expire-date-month-input::placeholder {
+  font-size: 1.125rem;
+  color: hsl(270deg, 3%, 87%);
+}
+.visa-form__expire-date-year-input {
+  width: 40%;
+  height: 45px;
+  border: 1px solid hsl(270deg, 3%, 87%);
+  border-radius: 8px;
+  text-indent: 1rem;
+}
+.visa-form__expire-date-year-input::placeholder {
+  font-size: 1.125rem;
+  color: hsl(270deg, 3%, 87%);
+}
+.visa-form__security-number-fieldset {
+  grid-column: 2/3;
+}
+.visa-form__security-number-fieldset.error .visa-form__security-number-error {
+  visibility: visible;
+}
+.visa-form__security-number-fieldset.error .visa-form__security-number-input {
+  border-color: hsl(0deg, 100%, 66%);
+}
+.visa-form__security-number-input {
+  width: 100%;
+  height: 45px;
+  border: 1px solid hsl(270deg, 3%, 87%);
+  border-radius: 8px;
+  text-indent: 1rem;
+}
+.visa-form__security-number-input::placeholder {
+  font-size: 1.125rem;
+  color: hsl(270deg, 3%, 87%);
+}
+.visa-form__submit {
+  width: 100%;
+  grid-column: 1/-1;
+  height: 50px;
+  border: none;
+  color: hsl(0deg, 0%, 100%);
+  border-radius: 8px;
+  font-size: 1.125rem;
+  font-family: "Space Grotesk", sans-serif;
+  background-color: hsl(278deg, 68%, 11%);
+  transition: 300ms all ease-in-out;
+  cursor: pointer;
+}
+.visa-form__submit:hover {
+  opacity: 0.8;
+}
+
+.form-success {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+.form-success.success {
+  display: flex;
+  animation-name: animate;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+  animation-timing-function: ease-in-out;
+}
+.form-success__image {
+  width: 80px;
+  height: 80px;
+}
+.form-success__title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.form-success__text {
+  font-size: 1.125rem;
+  color: hsl(279deg, 6%, 55%);
+}
+.form-success__button {
+  width: 100%;
+  max-width: 400px;
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.125rem;
+  color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
+  background-color: hsl(278deg, 68%, 11%);
+  transition: 300ms all ease-in-out;
+  font-family: "Space Grotesk", sans-serif;
+}
+.form-success__button:hover {
+  opacity: 0.8;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@media (max-width: 900px) {
+  main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    background-image: url("../images/bg-main-mobile.png");
+    background-size: 100% 30%;
+    align-items: center;
+    justify-items: center;
+  }
+  .card-form {
+    grid-row: 2/3;
+    grid-column: 1/-1;
+    width: 100%;
+    padding: 1rem;
+  }
+  fieldset {
+    width: 100%;
+  }
+  .visa-form {
+    width: 100%;
+  }
+  .front-card {
+    grid-row: 1/2;
+    width: 335.25px;
+    height: 183.75px;
+    justify-self: flex-start;
+    position: absolute;
+    top: 7.5rem;
+    left: 1rem;
+    z-index: 2;
+  }
+  .front-card__logo {
+    width: 63px;
+    height: 35.25px;
+    margin-bottom: 1.8rem;
+  }
+  .front-card__card-numbers {
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+  }
+  .back-card {
+    grid-row: 1/2;
+    width: 335.25px;
+    height: 183.75px;
+    justify-self: flex-end;
+    margin-right: 0;
+    position: absolute;
+    z-index: 1;
+    top: 1rem;
+    right: 1rem;
+  }
+  .back-card__security-number {
+    top: 5.2rem;
+    right: 2.4rem;
+  }
+  @keyframes animate {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
