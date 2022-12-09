@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Advice generator app</title>
+  <link rel="stylesheet" href="SCSS/main.css">
+</head>
+<body>
+<main class="advice-card">
+  <h1 class="advice-card__title">Advice #<span class="advice-card__number">63</span></h1>
+  <p class="advice-card__text">
+    If you're squashed close to strangers on public transport, try not to be rude to them. No one likes those
+    situations.
+  </p>
+  <picture>
+    <source srcset="images/pattern-divider-desktop.svg" media="(min-width: 600px)">
+    <img src="./images/pattern-divider-mobile.svg" alt="divider" aria-hidden="true" class="advice-card__divider">
+  </picture>
+  <button class="advice-card__button">
+    <img src="images/icon-dice.svg" alt="dice">
+  </button>
+</main>
+<script src="App.js"></script>
+</body>
+</html>
