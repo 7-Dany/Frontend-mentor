@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Expenses chart component</title>
+  <link rel="stylesheet" href="SCSS/main.css">
+</head>
+<body>
+<main>
+  <div class="total-spending">
+    <h1 class="total-spending__title">My balance</h1>
+    <p class="total-spending__number">$<span id="total">921.48</span></p>
+    <img src="images/logo.svg" alt="logo" aria-hidden="true" class="total-spending__logo">
+  </div>
+  <div class="days-spending">
+    <h2 class="days-spending__title">Spending - Last 7 Days</h2>
+    <div class="days-spending__charts">
+    </div>
+    <div class="month-total">
+      <h2 class="month-total__title">Total this month</h2>
+      <p class="month-total__number">$478.33</p>
+      <p class="month-total__percentage">+2.4% <span>from last month</span></p>
+    </div>
+  </div>
+</main>
+<script src="App.js" type="module"></script>
+</body>
+</html>

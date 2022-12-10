@@ -1,0 +1,212 @@
+@use "config" as *;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $cream;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 600px;
+}
+
+.total-spending {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  border-radius: 16px;
+  background-color: $soft-red;
+  color: $very-pale-orange;
+  align-items: center;
+  padding: 1.5rem 2rem;
+
+  &__title {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  &__number {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  &__logo {
+    grid-row: 1/-1;
+    grid-column: 2/3;
+    justify-self: flex-end;
+  }
+}
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+
+  &__price {
+    padding: 0.5rem;
+    background-color: $dark-brown;
+    color: $very-pale-orange;
+    border-radius: 8px;
+    visibility: hidden;
+    animation: fadeIn 1s forwards;
+  }
+
+  &__bar {
+    width: 50px;
+    min-height: 1px;
+    max-height: 160px;
+    height: 160px;
+    background-color: $soft-red;
+    border-radius: 8px;
+    transition: 300ms all ease-in-out;
+    animation: barUp 1s forwards ease-in normal;
+  }
+
+  &__day {
+    color: $medium-brown;
+  }
+
+  &.active {
+    .chart__bar {
+      background-color: $cyan;
+    }
+  }
+
+  &:hover {
+    .chart__price {
+      visibility: visible;
+    }
+
+    .chart__bar {
+      opacity: 0.7;
+    }
+  }
+}
+
+.days-spending {
+  background-color: $very-pale-orange;
+  padding: 2rem;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  &__title {
+    color: $dark-brown;
+    font-size: 2rem;
+  }
+
+  &__charts {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid $cream;
+    gap: 1rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.month-total {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  &__title {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    font-size: 1rem;
+    color: $medium-brown;
+    font-weight: 400;
+  }
+
+  &__number {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    font-size: 3rem;
+    color: $dark-brown;
+    font-weight: 700;
+  }
+
+  &__percentage {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    text-align: right;
+    color: $dark-brown;
+    font-weight: 700;
+
+    span {
+      display: block;
+      color: $medium-brown;
+      font-weight: 400;
+    }
+  }
+}
+
+@keyframes barUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 1rem;
+    width: 100%;
+  }
+  main {
+    width: 100%;
+  }
+  .chart {
+    width: calc((100% / 7) - 1rem);
+
+    &__bar {
+      width: 100%;
+    }
+  }
+
+  .days-spending {
+    &__charts {
+      gap: 0.2rem;
+      width: 100%;
+    }
+  }
+  .month-total__number {
+    font-size: 2.2rem;
+  }
+}
