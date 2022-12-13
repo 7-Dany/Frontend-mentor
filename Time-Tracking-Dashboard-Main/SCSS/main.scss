@@ -1,0 +1,163 @@
+@use "config" as *;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $very-dark-blue;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+}
+
+.user-card {
+  width: 240px;
+  background-color: $dark-blue;
+  border-radius: 12px;
+  grid-row: 1/-1;
+  grid-column: 1/2;
+
+  &__user-info {
+    height: 70%;
+    background-color: $blue;
+    padding: 2rem;
+    border-radius: 12px;
+  }
+
+  &__user-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid $white;
+    margin-bottom: 2rem;
+  }
+
+  &__user-name {
+    color: $white;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    font-size: 2.2rem;
+
+    span {
+      display: block;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      color: $pale-blue;
+    }
+  }
+
+  &__timeframe {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+  }
+
+  &__timeframe-button {
+    border: none;
+    text-align: left;
+    background-color: transparent;
+    font-size: 1rem;
+    transition: 300ms all ease-in-out;
+    cursor: pointer;
+    color: $desaturated-blue;
+    font-weight: 400;
+    font-family: 'Rubik', sans-serif;
+
+    &:hover {
+      color: $white;
+    }
+
+    &.active {
+      color: $white;
+    }
+  }
+}
+
+.category-card {
+  color: $white;
+  width: 240px;
+  border-radius: 12px;
+  position: relative;
+
+  &__image-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 1rem;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+    margin-bottom: -1.2rem;
+    position: relative;
+    z-index: -1;
+    height: 70px;
+  }
+
+  &__image {
+    margin-top: -0.4rem;
+  }
+
+  &__info {
+    background-color: $dark-blue;
+    position: relative;
+    border-radius: 12px;
+    padding: 2rem;
+    transition: 300ms all ease-in-out;
+  }
+
+  &__title {
+    display: inline-block;
+    margin-right: auto;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+  }
+
+  &__dots {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    img {
+      transition: 300ms all ease-in-out;
+    }
+
+    &:hover {
+      img {
+        filter: invert(99%) sepia(44%) saturate(50%) hue-rotate(320deg) brightness(1140%) contrast(100%);
+      }
+    }
+  }
+
+  &__current-time {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+  }
+
+  &__last-time {
+    color: $pale-blue;
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+
+  &:hover {
+    .category-card__info {
+      background-color: hsl(235, 46%, 30%);
+    }
+  }
+}

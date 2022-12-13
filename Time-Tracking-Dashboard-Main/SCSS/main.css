@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+.work {
+  background-color: hsl(15deg, 100%, 70%);
+}
+
+.play {
+  background-color: hsl(195deg, 74%, 62%);
+}
+
+.study {
+  background-color: hsl(348deg, 100%, 68%);
+}
+
+.exercise {
+  background-color: hsl(145deg, 58%, 55%);
+}
+
+.social {
+  background-color: hsl(264deg, 64%, 52%);
+}
+
+.self-care {
+  background-color: hsl(43deg, 84%, 65%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(226deg, 43%, 10%);
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+}
+
+.user-card {
+  width: 240px;
+  background-color: hsl(235deg, 46%, 20%);
+  border-radius: 12px;
+  grid-row: 1/-1;
+  grid-column: 1/2;
+}
+.user-card__user-info {
+  height: 70%;
+  background-color: hsl(246deg, 80%, 60%);
+  padding: 2rem;
+  border-radius: 12px;
+}
+.user-card__user-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid hsl(0deg, 0%, 100%);
+  margin-bottom: 2rem;
+}
+.user-card__user-name {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 300;
+  margin-bottom: 3rem;
+  font-size: 2.2rem;
+}
+.user-card__user-name span {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: hsl(236deg, 100%, 87%);
+}
+.user-card__timeframe {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1rem;
+}
+.user-card__timeframe-button {
+  border: none;
+  text-align: left;
+  background-color: transparent;
+  font-size: 1rem;
+  transition: 300ms all ease-in-out;
+  cursor: pointer;
+  color: hsl(235deg, 45%, 61%);
+  font-weight: 400;
+  font-family: "Rubik", sans-serif;
+}
+.user-card__timeframe-button:hover {
+  color: hsl(0deg, 0%, 100%);
+}
+.user-card__timeframe-button.active {
+  color: hsl(0deg, 0%, 100%);
+}
+
+.category-card {
+  color: hsl(0deg, 0%, 100%);
+  width: 240px;
+  border-radius: 12px;
+  position: relative;
+}
+.category-card__image-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 1rem;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+  margin-bottom: -1.2rem;
+  position: relative;
+  z-index: -1;
+  height: 70px;
+}
+.category-card__image {
+  margin-top: -0.4rem;
+}
+.category-card__info {
+  background-color: hsl(235deg, 46%, 20%);
+  position: relative;
+  border-radius: 12px;
+  padding: 2rem;
+  transition: 300ms all ease-in-out;
+}
+.category-card__title {
+  display: inline-block;
+  margin-right: auto;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+.category-card__dots {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.category-card__dots img {
+  transition: 300ms all ease-in-out;
+}
+.category-card__dots:hover img {
+  filter: invert(99%) sepia(44%) saturate(50%) hue-rotate(320deg) brightness(1140%) contrast(100%);
+}
+.category-card__current-time {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+.category-card__last-time {
+  color: hsl(236deg, 100%, 87%);
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+.category-card:hover .category-card__info {
+  background-color: hsl(235deg, 46%, 30%);
+}
+
+/*# sourceMappingURL=main.css.map */
