@@ -36,6 +36,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: hsl(226deg, 43%, 10%);
+  overflow-x: hidden;
 }
 
 main {
@@ -162,6 +163,12 @@ main {
 .category-card:hover .category-card__info {
   background-color: hsl(235deg, 46%, 30%);
 }
+.category-card:nth-child(4), .category-card:nth-child(7) {
+  animation: comeFromRight 2s ease-in-out both;
+}
+.category-card:nth-child(3), .category-card:nth-child(6) {
+  animation: comeFromTop 2s ease-in-out both;
+}
 
 @media (min-width: 900px) and (max-width: 1100px) {
   .user-card {
@@ -215,6 +222,22 @@ main {
     grid-column: 2/3;
     grid-row: 2/3;
     justify-self: flex-end;
+  }
+}
+@keyframes comeFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes comeFromTop {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
