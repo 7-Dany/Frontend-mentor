@@ -36,7 +36,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: hsl(226deg, 43%, 10%);
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 main {
@@ -52,6 +52,7 @@ main {
   border-radius: 12px;
   grid-row: 1/-1;
   grid-column: 1/2;
+  animation: comeFromLeft 2s ease-in-out both;
 }
 .user-card__user-info {
   height: 70%;
@@ -163,11 +164,17 @@ main {
 .category-card:hover .category-card__info {
   background-color: hsl(235deg, 46%, 30%);
 }
-.category-card:nth-child(4), .category-card:nth-child(7) {
-  animation: comeFromRight 2s ease-in-out both;
+.category-card:nth-child(4) {
+  animation: comeFromRightTop 2s ease-in-out both;
 }
-.category-card:nth-child(3), .category-card:nth-child(6) {
+.category-card:nth-child(7) {
+  animation: comeFromRightBottom 2s ease-in-out both;
+}
+.category-card:nth-child(2), .category-card:nth-child(3) {
   animation: comeFromTop 2s ease-in-out both;
+}
+.category-card:nth-child(5), .category-card:nth-child(6) {
+  animation: comeFromDown 2s ease-in-out both;
 }
 
 @media (min-width: 900px) and (max-width: 1100px) {
@@ -182,6 +189,7 @@ main {
   body {
     height: 100%;
     padding: 2rem;
+    overflow: auto;
   }
   main {
     display: flex;
@@ -190,6 +198,7 @@ main {
   }
   .user-card {
     width: 100%;
+    animation: comeFromTop 2s ease-in-out both;
   }
   .user-card__timeframe {
     flex-direction: row;
@@ -223,6 +232,28 @@ main {
     grid-row: 2/3;
     justify-self: flex-end;
   }
+  .category-card:nth-child(2), .category-card:nth-child(4), .category-card:nth-child(6) {
+    animation: comeFromLeft 2s ease-in-out both;
+  }
+  .category-card:nth-child(3), .category-card:nth-child(5), .category-card:nth-child(7) {
+    animation: comeFromRight 2s ease-in-out both;
+  }
+}
+@keyframes comeFromRightTop {
+  0% {
+    transform: translate(100%, -100%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes comeFromRightBottom {
+  0% {
+    transform: translate(100%, 100%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 @keyframes comeFromRight {
   0% {
@@ -232,7 +263,23 @@ main {
     transform: translateX(0);
   }
 }
+@keyframes comeFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 @keyframes comeFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes comeFromDown {
   0% {
     transform: translateY(100%);
   }
