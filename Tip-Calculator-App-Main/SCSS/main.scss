@@ -1,0 +1,264 @@
+@use "config" as *;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Space Mono', monospace;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  background-color: $light-grayish-cyan;
+}
+
+header {
+  grid-row: 1/2;
+  margin-bottom: 5rem;
+  align-self: flex-end;
+}
+
+main {
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  background-color: $white;
+  padding: 2rem;
+  border-radius: 16px;
+}
+
+.calculator-container {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem 0;
+
+  .bill {
+    position: relative;
+
+    &__label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: $grayish-cyan;
+      margin-bottom: 0.5rem;
+    }
+
+    &__error {
+      display: none;
+    }
+
+    &__input {
+      @extend %input;
+    }
+
+    &__dollar-img {
+      position: absolute;
+      left: 1rem;
+      bottom: 0.71rem;
+    }
+
+    &.error {
+      .bill__input {
+        outline: 2px solid $soft-red;
+      }
+
+      .bill__error {
+        display: inline-block;
+        color: $soft-red;
+      }
+    }
+  }
+
+  .percentage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+
+    &__label {
+      grid-column: 1/-1;
+      color: $grayish-cyan;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__error {
+      display: none;
+    }
+
+    &__choice {
+      width: 100px;
+      height: 40px;
+      color: $white;
+      background-color: $very-dark-cyan;
+      border: none;
+      border-radius: 4px;
+      font-size: 1.25rem;
+      cursor: pointer;
+      transition: 300ms all ease-in-out;
+
+      &:hover {
+        background-color: hsl(172, 67%, 70%);
+        color: $very-dark-cyan;
+      }
+    }
+
+    &__custom-input {
+      width: 100px;
+      height: 40px;
+      border-radius: 4px;
+      border: none;
+      background-color: $very-light-grayish-cyan;
+      text-indent: 0.8rem;
+      font-size: 1.5rem;
+      outline-color: $strong-cyan;
+      outline-width: 1px;
+      color: $very-dark-cyan;
+
+      &::placeholder {
+        font-size: 1.25rem;
+        color: $grayish-cyan;
+      }
+    }
+
+    &.error {
+      .percentage__custom-input {
+        outline: 2px solid $soft-red;
+      }
+
+      .percentage__error {
+        display: inline-block;
+        color: $soft-red;
+      }
+    }
+
+  }
+
+  .people-number {
+    position: relative;
+
+    &__label {
+      display: flex;
+      margin-bottom: 0.5rem;
+      color: $grayish-cyan;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__error {
+      display: none;
+    }
+
+    &__input {
+      @extend %input;
+
+    }
+
+    &.error {
+      .people-number__input {
+        outline: 2px solid $soft-red;
+      }
+
+      .people-number__error {
+        display: inline-block;
+        color: $soft-red;
+      }
+    }
+
+    &__person-img {
+      position: absolute;
+      bottom: 0.75rem;
+      left: 1rem;
+    }
+  }
+}
+
+.data-show-container {
+  background-color: $very-dark-cyan;
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+.data-show {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__title {
+    font-size: 1rem;
+    color: $white;
+
+    span {
+      display: block;
+      font-size: 0.75rem;
+      color: $grayish-cyan;
+    }
+
+  }
+
+  &__results {
+    font-size: 2.4rem;
+    color: $strong-cyan;
+    display: flex;
+    gap: 0.2rem;
+
+    img {
+      width: 20px;
+      object-fit: contain;
+    }
+  }
+}
+
+.reset {
+  margin-top: auto;
+  height: 40px;
+  background-color: hsl(172, 67%, 70%);
+  opacity: 0.15;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  color: $very-dark-cyan;
+  cursor: pointer;
+  transition: 300ms all ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 900px) {
+  body {
+    height: auto;
+    grid-template-rows: unset;
+    padding: 2rem;
+  }
+  main {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .calculator-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .calculator-container {
+    .percentage {
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: space-evenly;
+      justify-items: center;
+    }
+  }
+}

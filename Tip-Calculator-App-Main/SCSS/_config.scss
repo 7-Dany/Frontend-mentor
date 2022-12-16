@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+$strong-cyan: hsl(172, 67%, 45%);
+$very-dark-cyan: hsl(183, 100%, 15%);
+$dark-grayish-cyan: hsl(186, 14%, 43%);
+$grayish-cyan: hsl(184, 14%, 56%);
+$light-grayish-cyan: hsl(185, 41%, 84%);
+$very-light-grayish-cyan: hsl(189, 41%, 97%);
+$white: hsl(0, 0%, 100%);
+$soft-red: hsl(358, 79%, 70%);
+
+%input {
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  text-align: right;
+  padding-right: 0.8rem;
+  border: none;
+  background-color: $very-light-grayish-cyan;
+  font-size: 1.5rem;
+  outline-color: $strong-cyan;
+  outline-width: 1px;
+  color: $very-dark-cyan;
+
+  &::placeholder {
+    color: $grayish-cyan;
+  }
+}

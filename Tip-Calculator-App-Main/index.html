@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="SCSS/main.css">
+</head>
+<body>
+<header>
+  <img src="images/logo.svg" alt="splitter">
+</header>
+<main>
+  <div class="calculator-container">
+    <div class="bill">
+      <label for="bill" class="bill__label">
+        Bill
+        <span class="bill__error">Can't be zero</span>
+      </label>
+      <input type="text" id="bill" name="bill" class="bill__input" placeholder="0">
+      <img src="images/icon-dollar.svg" alt="dollar" class="bill__dollar-img">
+    </div>
+    <div class="percentage">
+      <label for="percentage" class="percentage__label">
+        Select Tip %
+        <span class="percentage__error">Can't be zero</span>
+      </label>
+      <button class="percentage__choice" id="percentage-5">5%</button>
+      <button class="percentage__choice" id="percentage-10">10%</button>
+      <button class="percentage__choice" id="percentage-15">15%</button>
+      <button class="percentage__choice" id="percentage-25">25%</button>
+      <button class="percentage__choice" id="percentage-50">50%</button>
+      <input type="text" id="percentage" name="percentage" class="percentage__custom-input" placeholder="Custom">
+    </div>
+    <div class="people-number">
+      <label for="people-number" class="people-number__label">
+        Number of People <span class="people-number__error">Can't be zero</span>
+      </label>
+      <input type="text" id="people-number" name="people-number" class="people-number__input" placeholder="0">
+      <img src="images/icon-person.svg" alt="person" class="people-number__person-img">
+    </div>
+  </div>
+  <div class="data-show-container">
+    <div class="data-show">
+      <p class="data-show__title">Tip Amount <span>/ person</span></p>
+      <p class="data-show__results">
+        <img src="images/icon-dollar.svg" alt="dollar" aria-hidden="true">
+        <span id="tip-amount">0.00</span>
+      </p>
+    </div>
+    <div class="data-show">
+      <p class="data-show__title">Total <span>/ person</span></p>
+      <p class="data-show__results">
+        <img src="images/icon-dollar.svg" alt="dollar" aria-hidden="true">
+        <span id="total-amount">0.00</span>
+      </p>
+    </div>
+    <button class="reset" type="reset">RESET</button>
+  </div>
+</main>
+<script src="App.js"></script>
+</body>
+</html>
