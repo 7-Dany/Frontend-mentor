@@ -38,8 +38,8 @@ for (let i of buttons) {
   i.button.addEventListener('click', event => {
     if (validateInput(data.bill, 'bill') && validateInput(data.people, 'people-number')) {
       let amount = Number(data.bill) * (i.percentage / 100)
-      tipAmount.innerText = `${amount}`
-      totalAmount.innerText = `${amount / data.people}`
+      tipAmount.innerText = `${amount.toFixed(2)}`
+      totalAmount.innerText = `${(amount / data.people).toFixed(2)}`
     }
   })
 }
@@ -48,8 +48,8 @@ customInput.addEventListener('keyup', event => {
   if (validateInput(event.target.value, 'percentage')) {
     if (validateInput(data.bill, 'bill') && validateInput(data.people, 'people-number')) {
       let amount = Number(data.bill) * (event.target.value / 100)
-      tipAmount.innerText = `${amount}`
-      totalAmount.innerText = `${amount / data.people}`
+      tipAmount.innerText = `${amount.toFixed(2)}`
+      totalAmount.innerText = `${(amount / data.people).toFixed(2)}`
     }
   }
 })
