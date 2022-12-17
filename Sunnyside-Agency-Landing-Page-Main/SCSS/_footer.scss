@@ -1,0 +1,52 @@
+@use "config" as *;
+
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5rem;
+  background-color: #90D4C5;
+}
+
+.logo {
+  filter: brightness(0) invert(40%) sepia(18%) saturate(1158%) hue-rotate(118deg) brightness(97%) contrast(89%);
+  width: 220px;
+}
+
+.links {
+  margin: 3rem;
+  display: flex;
+  gap: 2rem;
+
+  a {
+    text-decoration: none;
+    color: $dark-moderate-cyan;
+    transition: 300ms all ease-in-out;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+.icons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 2rem;
+
+  a {
+    text-decoration: none;
+
+    img {
+      transition: 300ms all ease-in-out;
+    }
+
+    &:hover {
+      img {
+        filter: brightness(0) invert(100%) sepia(10%) saturate(839%) hue-rotate(220deg) brightness(113%) contrast(100%);
+      }
+    }
+  }
+}

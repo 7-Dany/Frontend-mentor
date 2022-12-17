@@ -1,0 +1,50 @@
+@use "config" as *;
+@use "header" as *;
+@use "main" as *;
+@use "footer" as *;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: $barlow-font;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+.hidden-right {
+  transform: translateX(100%);
+  transition: 1s all ease-in-out;
+}
+
+.hidden-left {
+  transform: translateX(-100%);
+  transition: 1s all ease-in-out;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+@for $i from 1 through 4 {
+  .client:nth-child(#{$i}) {
+    transition-delay: 200ms * $i;
+  }
+}
+
+picture:nth-child(2), picture:nth-child(3) {
+  transition-delay: 300ms;
+}
+
+picture:nth-child(1), picture:nth-child(4) {
+  transition-delay: 400ms;
+}
+
+@media (prefers-reduced-motion) {
+  .hidden-right, .hidden-left {
+    transition: none;
+  }
+}
