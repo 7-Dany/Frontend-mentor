@@ -1,0 +1,244 @@
+@use "config" as *;
+
+main {
+  overflow-x: hidden;
+}
+
+.main-title {
+  text-align: center;
+  margin: 8rem;
+  color: $very-dark-blue;
+  font-size: 1.8rem;
+  transition: 800ms all ease-in-out;
+}
+
+.features-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding-left: 8rem;
+  margin-top: -10rem;
+  gap: 2rem;
+  min-height: 900px;
+
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .info {
+    transition: 600ms all ease-in-out 200ms;
+
+    &__title {
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+      color: $very-dark-blue;
+    }
+
+    &__text {
+      color: $very-dark-blue;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    &:nth-child(2) {
+      transition: 800ms all ease-in-out 200ms;
+    }
+  }
+
+  .images {
+    width: 100%;
+    height: 100%;
+    justify-self: flex-end;
+    position: relative;
+    overflow-x: hidden;
+    transition: 800ms all ease-in-out 200ms;
+    @extend %vibrate;
+
+    img {
+      position: absolute;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+}
+
+.state {
+  height: 420px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 400px;
+  gap: 4rem;
+  background: url("../images/bg-pattern-circles.svg") no-repeat -30% 50%,
+  linear-gradient(45deg, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+  border-radius: 0 100px 0 100px;
+  padding-right: 8rem;
+
+  .state-info {
+    margin-block: auto;
+    transition: 800ms all ease-in-out;
+
+    &__title {
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      color: $white;
+    }
+
+    &__text {
+      color: $white;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  }
+
+  .phones {
+    justify-self: flex-end;
+    margin-top: -4rem;
+    transition: 800ms all ease-in-out 200ms;
+  }
+}
+
+
+.features-2 {
+  margin: 8rem 0;
+  padding-left: 0;
+  padding-right: 8rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  min-height: 900px;
+
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .info {
+    transition: 600ms all ease-in-out 200ms;
+
+    &__title {
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+      color: $very-dark-blue;
+    }
+
+    &__text {
+      color: $very-dark-blue;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    &:nth-child(2) {
+      transition: 800ms all ease-in-out 200ms;
+    }
+  }
+
+  .images {
+    width: 100%;
+    height: 100%;
+    justify-self: flex-start;
+    position: relative;
+    overflow-x: hidden;
+    @extend %vibrate;
+
+    img {
+      position: absolute;
+      right: -1rem;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .design {
+    padding-left: 4rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .main-title {
+    margin: 6rem 0;
+  }
+  .features-1 {
+    min-height: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    margin-top: -2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+
+    .images {
+      margin-right: 0;
+
+      img {
+        width: 100%;
+        position: unset;
+      }
+    }
+  }
+
+  .state {
+    height: auto;
+    margin: 14rem 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 8rem;
+    background-position: 50% 150%;
+    gap: 0;
+    position: relative;
+    padding-right: 0;
+    border-radius: 0 50px 0 50px;
+  }
+
+  .state-info {
+    padding-inline: 2rem;
+  }
+
+  .phones {
+    width: 100%;
+    position: relative;
+    top: -5rem;
+
+    img {
+      width: 332px;
+    }
+  }
+
+  .features-2 {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-right: 2rem;
+    padding-left: 2rem;
+
+    .images {
+      margin-right: 0;
+
+      img {
+        width: 100%;
+        position: unset;
+      }
+    }
+  }
+}
+
+@keyframes vibrate {
+  0% {
+    transform: translateX(-10%);
+  }
+  50% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

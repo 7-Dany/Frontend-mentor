@@ -1,0 +1,82 @@
+@use "config" as *;
+@use "header";
+@use "main";
+@use "footer";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: $overpass-font;
+  overflow-x: hidden;
+}
+
+// Animation classes
+
+.hidden-nav-up {
+  transform: translateY(-15rem);
+  opacity: 0;
+}
+
+.animate-nav-up {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.hidden-up {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.animate-up {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.hidden-right {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.animate-right {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.hidden-left {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.animate-left {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+
+  .hidden-nav-up {
+    transform: none;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .animate-nav-up {
+    height: auto;
+    opacity: 1;
+    padding: 1rem;
+  }
+
+  .hidden-nav {
+    transform: translateY(-150%);
+  }
+
+  .animate-nav {
+    transform: translateY(0);
+  }
+}

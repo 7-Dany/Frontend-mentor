@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | [Blogr]</title>
+  <link rel="stylesheet" href="SCSS/home.css">
+  <script src="App.js" defer></script>
+</head>
+<body>
+<header>
+  <div class="header-navigation">
+    <div class="header-logo">
+      <img src="images/logo.svg" alt="Blogr" class="header-logo__logo">
+    </div>
+    <div class="menu-btn" role="button">
+      <span class="menu-btn__burger"></span>
+    </div>
+    <nav class="nav hidden-nav">
+      <div class="menu-items">
+        <div class="menu-items__item">
+          <a href="#" class="menu-items__link">Product</a>
+          <button class="menu-items__arrow product-arrow">
+            <picture>
+              <source srcset="images/icon-arrow-dark.svg" media="(max-width: 900px)">
+              <img src="images/icon-arrow-light.svg" alt="arrow">
+            </picture>
+          </button>
+          <div class="menu-items__extended-items product hidden-nav-up">
+            <a href="#" class="menu-items__extended-item">Overview</a>
+            <a href="#" class="menu-items__extended-item">Pricing</a>
+            <a href="#" class="menu-items__extended-item">Marketplace</a>
+            <a href="#" class="menu-items__extended-item">Features</a>
+            <a href="#" class="menu-items__extended-item">Integration</a>
+          </div>
+        </div>
+        <div class="menu-items__item">
+          <a href="#" class="menu-items__link">Company</a>
+          <button class="menu-items__arrow company-arrow">
+            <picture>
+              <source srcset="images/icon-arrow-dark.svg" media="(max-width: 900px)">
+              <img src="images/icon-arrow-light.svg" alt="arrow">
+            </picture>
+          </button>
+          <div class="menu-items__extended-items company hidden-nav-up">
+            <a href="#" class="menu-items__extended-item">About</a>
+            <a href="#" class="menu-items__extended-item">Team</a>
+            <a href="#" class="menu-items__extended-item">Blog</a>
+            <a href="#" class="menu-items__extended-item">Careers</a>
+          </div>
+        </div>
+        <div class="menu-items__item">
+          <a href="#" class="menu-items__link">Connect</a>
+          <button class="menu-items__arrow connect-arrow">
+            <picture>
+              <source srcset="images/icon-arrow-dark.svg" media="(max-width: 900px)">
+              <img src="images/icon-arrow-light.svg" alt="arrow">
+            </picture>
+          </button>
+          <div class="menu-items__extended-items connect hidden-nav-up">
+            <a href="#" class="menu-items__extended-item">Contact</a>
+            <a href="#" class="menu-items__extended-item">Newsletter</a>
+            <a href="#" class="menu-items__extended-item">Linkedin</a>
+          </div>
+        </div>
+      </div>
+      <div class="login-choice">
+        <button class="login-choice__login">Login</button>
+        <button class="login-choice__sign-up">Sign Up</button>
+      </div>
+    </nav>
+  </div>
+  <div class="hero-section hidden-up">
+    <h1 class="hero-section__title">A modern publishing platform</h1>
+    <p class="hero-section__text">Grow your audience and build your online brand</p>
+    <div class="hero-section__buttons-container">
+      <button class="hero-section__start-button">Start for Free</button>
+      <button class="hero-section__learn-button">Learn More</button>
+    </div>
+  </div>
+</header>
+<main>
+  <h2 class="main-title hidden-up">Designed for the future</h2>
+  <section class="features-1">
+    <div class="info-container">
+      <div class="info hidden-up">
+        <h3 class="info__title">Introducing an extensible editor</h3>
+        <p class="info__text">
+          Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
+          The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
+          videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
+          change the looks of a blog.
+        </p>
+      </div>
+      <div class="info hidden-up">
+        <h3 class="info__title">Robust content management</h3>
+        <p class="info__text">
+          Flexible content management enables users to easily move through posts. Increase the usability of your blog
+          by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+        </p>
+      </div>
+    </div>
+    <div class="images hidden-right">
+      <picture>
+        <source srcset="images/illustration-editor-desktop.svg" media="(min-width: 900px)">
+        <img src="images/illustration-editor-mobile.svg" alt="" class="images__editor">
+      </picture>
+    </div>
+  </section>
+  <section class="state">
+    <div class="phones hidden-up">
+      <img src="images/illustration-phones.svg" alt="phones">
+    </div>
+    <div class="state-info hidden-right">
+      <h3 class="state-info__title">State of the Art Infrastructure</h3>
+      <p class="state-info__text">
+        With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
+        This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+      </p>
+    </div>
+  </section>
+  <section class="features-2">
+    <div class="images">
+      <picture>
+        <source srcset="images/illustration-laptop-desktop.svg" media="(min-width: 900px)">
+        <img src="images/illustration-laptop-mobile.svg" alt="" class="images__editor">
+      </picture>
+    </div>
+    <div class="info-container">
+      <div class="info hidden-up">
+        <h3 class="info__title">Free, open, simple</h3>
+        <p class="info__text">
+          Blogr is a free and open source application backed by a large community of helpful developers. It supports
+          features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
+          and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+        </p>
+      </div>
+      <div class="info hidden-up">
+        <h3 class="info__title">Powerful tooling</h3>
+        <p class="info__text">
+          Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a
+          breeze, but
+          capable of producing even the most complicated sites.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer-image hidden-left">
+    <img src="images/logo.svg" alt="Blogr">
+  </div>
+  <div class="footer-links hidden-left">
+    <a href="" class="footer-links__main-link">Product</a>
+    <a href="" class="footer-links__link">Overview</a>
+    <a href="" class="footer-links__link">Pricing</a>
+    <a href="" class="footer-links__link">Marketplace</a>
+    <a href="" class="footer-links__link">Features</a>
+    <a href="" class="footer-links__link">Integrations</a>
+  </div>
+  <div class="footer-links hidden-right">
+    <a href="" class="footer-links__main-link">Company</a>
+    <a href="" class="footer-links__link">About</a>
+    <a href="" class="footer-links__link">Team</a>
+    <a href="" class="footer-links__link">Blog</a>
+    <a href="" class="footer-links__link">Careers</a>
+  </div>
+  <div class="footer-links hidden-right">
+    <a href="" class="footer-links__main-link">Connect</a>
+    <a href="" class="footer-links__link">Contact</a>
+    <a href="" class="footer-links__link">Newsletter</a>
+    <a href="" class="footer-links__link">Linkedin</a>
+  </div>
+</footer>
+</body>
+</html>

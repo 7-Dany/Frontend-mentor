@@ -1,0 +1,67 @@
+@use "config" as *;
+
+footer {
+  background-color: $very-dark-black-blue;
+  border-radius: 0 100px 0 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 4rem;
+  overflow-x: hidden;
+}
+
+.footer-image {
+  transition: 1000ms all ease-in-out;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 0.75rem;
+  transition: 800ms all ease-in-out;
+
+  &__main-link {
+    margin-bottom: 1rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: $white;
+    font-weight: 600;
+
+    &:hover {
+      text-decoration: underline 2px;
+    }
+  }
+
+  &__link {
+    font-size: 1rem;
+    text-decoration: none;
+    color: $grayish-blue;
+    font-weight: 400;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &:nth-child(4) {
+    transition: 1000ms all ease-in-out;
+  }
+
+  &:nth-child(3) {
+    transition: 800ms all ease-in-out;
+  }
+}
+
+@media (max-width: 900px) {
+  footer {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+    border-radius: 0 50px 0 0;
+  }
+  .footer-links {
+    gap: 0.6rem;
+  }
+}

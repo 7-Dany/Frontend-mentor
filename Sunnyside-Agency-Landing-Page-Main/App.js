@@ -28,7 +28,6 @@ function observe(className) {
   })
 }
 
-
 const right = document.querySelectorAll('.hidden-right')
 const left = document.querySelectorAll('.hidden-left')
 

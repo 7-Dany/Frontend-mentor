@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
+
+// Fonts
+$overpass-font: 'Overpass', sans-serif;
+$ubuntu-font: 'Ubuntu', sans-serif;
+
+// Colors
+$light-red: hsl(356, 100%, 66%);
+$very-light-red: hsl(355, 100%, 74%);
+$very-dark-blue: hsl(208, 49%, 24%);
+$white: hsl(0, 0%, 100%);
+$grayish-blue: hsl(240, 2%, 79%);
+$very-dark-grayish-blue: hsl(207, 13%, 34%);
+$very-dark-black-blue: hsl(240, 10%, 16%);
+
+%vibrate {
+  animation-name: vibrate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+}
+
+%button {
+  width: 130px;
+  height: 44px;
+  border-radius: 25px;
+  border: none;
+  font-family: $ubuntu-font;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 300ms all ease-in-out;
+}
+
