@@ -1,13 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap");
-.features-1 .images, .features-2 .images {
-  animation-name: vibrate;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: both;
-  animation-direction: alternate;
-}
-
 .login-choice__login, .login-choice__sign-up, .hero-section__start-button, .hero-section__learn-button {
   width: 130px;
   height: 44px;
@@ -86,6 +77,7 @@ header {
 .menu-items__extended-items {
   min-width: 150px;
   position: absolute;
+  z-index: 1;
   top: 2rem;
   padding: 2rem;
   display: flex;
@@ -438,6 +430,7 @@ main {
   justify-self: flex-start;
   position: relative;
   overflow-x: hidden;
+  transition: 800ms all ease-in-out 200ms;
 }
 .features-2 .images img {
   position: absolute;

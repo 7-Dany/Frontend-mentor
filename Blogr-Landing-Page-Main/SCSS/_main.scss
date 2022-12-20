@@ -54,7 +54,6 @@ main {
     position: relative;
     overflow-x: hidden;
     transition: 800ms all ease-in-out 200ms;
-    @extend %vibrate;
 
     img {
       position: absolute;
@@ -142,7 +141,7 @@ main {
     justify-self: flex-start;
     position: relative;
     overflow-x: hidden;
-    @extend %vibrate;
+    transition: 800ms all ease-in-out 200ms;
 
     img {
       position: absolute;
