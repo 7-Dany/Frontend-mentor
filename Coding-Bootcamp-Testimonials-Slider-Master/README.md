@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub](https://github.com/7-Dany/Frontend-mentor/tree/main/Coding-Bootcamp-Testimonials-Slider-Master)
+- Live Site URL: [Live Site](https://7-dany.github.io/Frontend-mentor/Coding-Bootcamp-Testimonials-Slider-Master/index.html)
 
 ## My process
 
