@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Social Media Dashboard</title>
+  <link rel="stylesheet" href="SCSS/home.css">
+  <script defer src="App.js"></script>
+</head>
+<body>
+<header class="header">
+  <div class="header__title-container">
+    <h1 class="header__title">Social Media Dashboard</h1>
+    <p class="header__followers-count">Total Followers: 23,004</p>
+  </div>
+  <div class="header__toggle-container">
+    <p class="header__toggle-option">Dark Mode</p>
+    <button class="header__toggle" aria-label="toggle dark mode">
+      <span class="header__toggle-circle"></span>
+    </button>
+  </div>
+</header>
+<main>
+  <section class="follower-cards-container">
+    <div class="follower-card">
+      <div class="follower-card__social-platform-info">
+        <img src="images/icon-facebook.svg" alt="facebook" class="follower-card__social-platform-image">
+        <p class="follower-card__social-platform-username">@nathanf</p>
+      </div>
+      <p class="follower-card__followers-count">1987</p>
+      <p class="follower-card__followers-name">Followers</p>
+      <p class="follower-card__followers-increase">
+        <img src="images/icon-up.svg" alt="up">
+        12 Today
+      </p>
+    </div>
+    <div class="follower-card">
+      <div class="follower-card__social-platform-info">
+        <img src="images/icon-twitter.svg" alt="facebook" class="follower-card__social-platform-image">
+        <p class="follower-card__social-platform-username">@nathanf</p>
+      </div>
+      <p class="follower-card__followers-count">1044</p>
+      <p class="follower-card__followers-name">Followers</p>
+      <p class="follower-card__followers-increase">
+        <img src="images/icon-up.svg" alt="up">
+        99 Today
+      </p>
+    </div>
+    <div class="follower-card">
+      <div class="follower-card__social-platform-info">
+        <img src="images/icon-instagram.svg" alt="facebook" class="follower-card__social-platform-image">
+        <p class="follower-card__social-platform-username">@realnathanf</p>
+      </div>
+      <p class="follower-card__followers-count">11k</p>
+      <p class="follower-card__followers-name">Followers</p>
+      <p class="follower-card__followers-increase">
+        <img src="images/icon-up.svg" alt="up">
+        1099 Today
+      </p>
+    </div>
+    <div class="follower-card">
+      <div class="follower-card__social-platform-info">
+        <img src="images/icon-youtube.svg" alt="facebook" class="follower-card__social-platform-image">
+        <p class="follower-card__social-platform-username">Nathan F.</p>
+      </div>
+      <p class="follower-card__followers-count">8239</p>
+      <p class="follower-card__followers-name">Subscribers</p>
+      <p class="follower-card__followers-decrease">
+        <img src="images/icon-down.svg" alt="up">
+        144 Today
+      </p>
+    </div>
+  </section>
+  <section class="today-overview">
+    <h2 class="today-overview__title">Overview - Today</h2>
+    <div class="overview-card">
+      <div class="overview-card__header">
+        <h3 class="overview-card__title">Page Views</h3>
+        <img src="images/icon-facebook.svg" alt="facebook" class="overview-card__image">
+      </div>
+      <div class="overview-card__details">
+        <p class="overview-card__counts">87</p>
+        <p class="overview-card__percentage-increase">
+          <img src="images/icon-up.svg" alt="up">
+          3%
+        </p>
+      </div>
+    </div>
+    <div class="overview-card">
+      <div class="overview-card__header">
+        <h3 class="overview-card__title">Likes</h3>
+        <img src="images/icon-facebook.svg" alt="facebook" class="overview-card__image">
+      </div>
+      <div class="overview-card__details">
+        <p class="overview-card__counts">52</p>
+        <p class="overview-card__percentage-decrease">
+          <img src="images/icon-down.svg" alt="down">
+          2%
+        </p>
+      </div>
+    </div>
+    <div class="overview-card">
+      <div class="overview-card__header">
+        <h3 class="overview-card__title">Likes</h3>
+        <img src="images/icon-instagram.svg" alt="facebook" class="overview-card__image">
+      </div>
+      <div class="overview-card__details">
+        <p class="overview-card__counts">5462</p>
+        <p class="overview-card__percentage-increase">
+          <img src="images/icon-up.svg" alt="up">
+          2257%
+        </p>
+      </div>
+    </div>
+    <div class="overview-card">
+      <div class="overview-card__header">
+        <h3 class="overview-card__title">Profile Views</h3>
+        <img src="images/icon-instagram.svg" alt="facebook" class="overview-card__image">
+      </div>
+      <div class="overview-card__details">
+        <p class="overview-card__counts">52k</p>
+        <p class="overview-card__percentage-increase">
+          <img src="images/icon-up.svg" alt="up">
+          1375%
+        </p>
+      </div>
+    </div>
+    <div class="overview-card">
+      <div class="overview-card__header">
+        <h3 class="overview-card__title">Retweets</h3>
+        <img src="images/icon-twitter.svg" alt="facebook" class="overview-card__image">
+      </div>
+      <div class="overview-card__details">
+        <p class="overview-card__counts">117</p>
+        <p class="overview-card__percentage-increase">
+          <img src="images/icon-up.svg" alt="up">
+          303%
+        </p>
+      </div>
+    </div>
+    <div class="overview-card">
+      <div class="overview-card__header">
+        <h3 class="overview-card__title">Likes</h3>
+        <img src="images/icon-twitter.svg" alt="facebook" class="overview-card__image">
+      </div>
+      <div class="overview-card__details">
+        <p class="overview-card__counts">507</p>
+        <p class="overview-card__percentage-increase">
+          <img src="images/icon-up.svg" alt="up">
+          553%
+        </p>
+      </div>
+    </div>
+    <div class="overview-card">
+      <div class="overview-card__header">
+        <h3 class="overview-card__title">Likes</h3>
+        <img src="images/icon-youtube.svg" alt="facebook" class="overview-card__image">
+      </div>
+      <div class="overview-card__details">
+        <p class="overview-card__counts">107</p>
+        <p class="overview-card__percentage-decrease">
+          <img src="images/icon-down.svg" alt="down">
+          19%
+        </p>
+      </div>
+    </div>
+    <div class="overview-card">
+      <div class="overview-card__header">
+        <h3 class="overview-card__title">Total Views</h3>
+        <img src="images/icon-youtube.svg" alt="facebook" class="overview-card__image">
+      </div>
+      <div class="overview-card__details">
+        <p class="overview-card__counts">1407</p>
+        <p class="overview-card__percentage-decrease">
+          <img src="images/icon-down.svg" alt="down">
+          12%
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>

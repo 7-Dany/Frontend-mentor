@@ -1,0 +1,68 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__title {
+    margin-bottom: 0.5rem;
+    color: var(--text-2);
+  }
+
+  &__followers-count {
+    color: var(--text-1);
+    font-weight: 700;
+  }
+
+  &__toggle-container {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__toggle-option {
+    color: var(--text-1);
+    font-weight: 700;
+  }
+
+  &__toggle {
+    width: 50px;
+    height: 22px;
+    background: var(--toggle);
+    border: none;
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+    transition: 300ms all ease-in-out;
+
+    &.active {
+      .header__toggle-circle {
+        transform: translateX(-27px);
+      }
+    }
+  }
+
+  &__toggle-circle {
+    width: 18px;
+    height: 18px;
+    background: white;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: 300ms all ease-in-out;
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+
+    &__toggle-container {
+      width: 100%;
+      justify-content: space-between;
+      border-top: 1px solid var(--text-2);
+      padding: 2rem 0 0;
+    }
+  }
+}
