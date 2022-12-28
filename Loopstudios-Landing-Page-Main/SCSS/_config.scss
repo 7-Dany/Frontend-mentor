@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+$alata-font: 'Alata', sans-serif;
+$josefin-sins: 'Josefin Sans', sans-serif;
+
+$black: hsl(0, 0%, 0%);
+$white: hsl(0, 0%, 100%);
+$dark-gray: hsl(0, 0%, 55%);
+$very-dark-gray: hsl(0, 0%, 41%);
+
+@keyframes move-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+@keyframes move-left {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
