@@ -1,0 +1,74 @@
+@use "config" as *;
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  background-color: $black;
+  padding: 4rem 8rem;
+  gap: 2rem;
+}
+
+.footer-links {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    color: $white;
+    @extend %link;
+  }
+}
+
+.footer-icons {
+  justify-self: flex-end;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    @extend %link;
+  }
+}
+
+.footer-copyright {
+  color: $dark-gray;
+  justify-self: flex-end;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 1200px) {
+  footer {
+    padding-inline: 6rem;
+  }
+}
+
+@media (max-width: 1050px) {
+  footer {
+    padding-inline: 4rem;
+  }
+}
+
+@media (max-width: 750px) {
+  footer {
+    padding-inline: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+    gap: 3rem;
+  }
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-icons {
+    justify-self: center;
+  }
+  .footer-copyright {
+    justify-self: center;
+  }
+}

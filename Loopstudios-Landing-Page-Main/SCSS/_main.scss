@@ -5,19 +5,20 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 8rem;
 }
 
 .info {
+  width: 100%;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  
+
   &__details {
     background-color: $white;
     z-index: 1;
-    padding: 4rem 0 0 4rem;
+    padding: 4rem 4rem 0;
     margin-left: -8rem;
-    width: 460px;
   }
 
   &__details-title {
@@ -35,12 +36,77 @@ main {
   }
 }
 
+.images-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+  grid-template-rows: auto 1fr 1fr;
+  gap: 2rem;
+}
+
+.images-title {
+  grid-row: 1/2;
+  grid-column: 1/-2;
+  justify-self: flex-start;
+  align-self: center;
+  text-transform: uppercase;
+  font-family: $josefin-sins;
+  font-size: 2.2rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  width: max-content;
+}
+
+.images-link {
+  grid-column: -1/-2;
+  grid-row: 1/2;
+  justify-self: flex-end;
+  align-self: center;
+  border: 1px solid $black;
+  padding: 0.4rem 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: $alata-font;
+  font-weight: 400;
+  color: $black;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+  transition: 300ms all ease-in-out;
+
+  &:hover {
+    color: $white;
+    background-color: $black;
+  }
+}
+
+.image-show {
+  position: relative;
+
+  &__image {
+    width: 100%;
+  }
+
+  &__text {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    text-transform: uppercase;
+    font-family: $josefin-sins;
+    font-weight: 300;
+    color: $white;
+    font-size: 2rem;
+    text-align: left;
+    max-width: 150px;
+  }
+}
+
 @media (max-width: 1200px) {
   main {
     padding-inline: 6rem;
   }
   .info__details {
-    margin-left: -12rem;
+    margin-left: -18rem;
   }
 }
 
@@ -49,13 +115,13 @@ main {
     padding-inline: 4rem;
   }
   .info__details {
-    margin-left: -16rem;
+    margin-left: -20rem;
   }
 }
 
 @media (max-width: 950px) {
   .info__details {
-    margin-left: -28rem;
+    margin-left: -26rem;
   }
 }
 
@@ -84,6 +150,26 @@ main {
       font-size: 1.4rem;
       line-height: 1.6;
     }
+  }
+
+  .images-container {
+    grid-template-columns: 1fr;
+  }
+
+  .images-link, .images-title {
+    grid-row: auto;
+    align-self: center;
+    justify-self: center;
+    margin-bottom: 0;
+  }
+
+  .images-link {
+    width: 180px;
+    font-size: 1.5rem;
+  }
+
+  .image-show__text {
+    font-size: 1.5rem;
   }
 }
 
