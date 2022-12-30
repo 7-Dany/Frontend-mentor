@@ -4,9 +4,11 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  align-items: center;
   background-color: $black;
   padding: 4rem 8rem;
   gap: 2rem;
+  overflow-x: hidden;
 }
 
 .footer-links {

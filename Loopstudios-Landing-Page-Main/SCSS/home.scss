@@ -2,6 +2,7 @@
 @use "header" as *;
 @use "main" as *;
 @use "footer" as *;
+@use "animations" as *;
 
 * {
   box-sizing: border-box;
@@ -11,5 +12,6 @@
 
 body {
   font-family: $alata-font;
-  overflow: auto;
+  overflow-x: hidden;
 }
+

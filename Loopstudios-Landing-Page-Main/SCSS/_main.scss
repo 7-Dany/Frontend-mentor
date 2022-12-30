@@ -6,6 +6,7 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 8rem;
+  overflow-x: hidden;
 }
 
 .info {
@@ -39,7 +40,7 @@ main {
 .images-container {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto 1fr 1fr;
   gap: 2rem;
 }
@@ -61,7 +62,6 @@ main {
   grid-column: -1/-2;
   grid-row: 1/2;
   justify-self: flex-end;
-  align-self: center;
   border: 1px solid $black;
   padding: 0.4rem 2rem;
   text-decoration: none;
@@ -72,7 +72,6 @@ main {
   font-size: 1rem;
   letter-spacing: 1px;
   margin-bottom: 2rem;
-  transition: 300ms all ease-in-out;
 
   &:hover {
     color: $white;
@@ -89,8 +88,8 @@ main {
 
   &__text {
     position: absolute;
-    bottom: 2rem;
-    left: 2rem;
+    bottom: 1.2rem;
+    left: 1.2rem;
     text-transform: uppercase;
     font-family: $josefin-sins;
     font-weight: 300;
@@ -116,6 +115,9 @@ main {
   }
   .info__details {
     margin-left: -20rem;
+  }
+  .images-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 

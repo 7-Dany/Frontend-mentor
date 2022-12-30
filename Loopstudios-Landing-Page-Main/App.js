@@ -13,3 +13,18 @@ menuBtn.addEventListener('click', event => {
         active = false
     }
 })
+
+function observe(className) {
+    return new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add(className)
+            } else {
+                entry.target.classList.remove(className)
+            }
+        })
+    })
+}
+
+const hiddenElements = document.querySelectorAll('.hidden')
+hiddenElements.forEach(element => observe('animate').observe(element))

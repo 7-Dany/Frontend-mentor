@@ -1,0 +1,263 @@
+// Header part
+.header-logo {
+  transition: 800ms all ease-in-out;
+
+  &.hidden {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  &.animate {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.menu-items {
+  @for $i from 1 through 5 {
+    &__item:nth-child(#{$i}) {
+      transition-duration: 150ms * $i;
+    }
+  }
+
+  &.hidden {
+    .menu-items__item {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+  }
+
+  &.animate {
+    .menu-items__item {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+}
+
+.main-header {
+  transition: 800ms all ease-in-out;
+
+  &.hidden {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  &.animate {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+// Main part
+
+// Info section
+.info__image-container {
+  transition: 800ms all ease-in-out;
+
+  &.hidden {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  &.animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.info__details {
+  transition: 800ms all ease-in-out;
+
+  &.hidden {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  &.animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// images container section
+.images-title {
+  transition: 500ms all ease-in-out;
+
+  &.hidden {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  &.animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.images-link {
+  transition: 500ms all ease-in-out;
+
+  &.hidden {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  &.animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.image-show {
+  transition: 1000ms all ease-in-out;
+}
+
+.image-show:nth-child(3),
+.image-show:nth-child(7),
+.image-show:nth-child(4),
+.image-show:nth-child(8) {
+  transition-duration: 500ms;
+}
+
+.image-show:nth-child(2),
+.image-show:nth-child(3),
+.image-show:nth-child(6),
+.image-show:nth-child(7) {
+
+  &.hidden {
+    transform: translateX(-100%);
+  }
+
+  &.animate {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.image-show:nth-child(4),
+.image-show:nth-child(5),
+.image-show:nth-child(8),
+.image-show:nth-child(9) {
+
+  &.hidden {
+    transform: translateX(100%);
+  }
+
+  &.animate {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+// Footer part
+.footer-logo {
+  transition: 800ms all ease-in-out;
+
+  &.hidden {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  &.animate {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.footer-links {
+  &.hidden {
+    a {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  }
+
+  &.animate {
+    @for $i from 1 through 5 {
+      a:nth-child(#{$i}) {
+        transition: (200ms * $i) all ease-in-out;
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.footer-icons {
+  &.hidden {
+    a {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+  }
+
+  &.animate {
+    @for $i from 1 through 4 {
+      a:nth-child(#{$i}) {
+        transition: (250ms * $i) all ease-in-out;
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.footer-copyright {
+  transition: 800ms all ease-in-out;
+
+  &.hidden {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  &.animate {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 750px) {
+  .images-link {
+    &.hidden {
+      transform: translateY(100%);
+    }
+
+    &.animate {
+      transform: translateY(0);
+    }
+  }
+
+  @for $i from 1 through 9 {
+    .image-show:nth-child(even) {
+      transition: 500ms all ease-in-out;
+
+      &.hidden {
+        transform: translateX(-100%);
+      }
+
+      &.animate {
+        transform: translateX(0);
+      }
+    }
+
+    .image-show:nth-child(odd) {
+      transition: 500ms all ease-in-out;
+
+      &.hidden {
+        transform: translateX(100%);
+      }
+
+      &.animate {
+        transform: translateX(0);
+      }
+    }
+  }
+}
+
+@media (prefers-reduced-motion) {
+  *.hidden {
+    transform: none;
+    opacity: 1;
+  }
+}
