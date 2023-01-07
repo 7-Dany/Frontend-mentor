@@ -23,3 +23,30 @@ bookmarkBtn.addEventListener('click', event => {
         bookmarked = false
     }
 })
+
+const backBtn = document.querySelector('.product-header__back-project-button')
+const closeBtn = document.querySelector('.main-model__close-modal')
+const backProject = document.querySelector('.back-project-model')
+let showBackProject = false
+backBtn.addEventListener('click', event => {
+    if (!showBackProject) {
+        backProject.classList.add('show')
+        document.body.style.overflow = 'hidden'
+        showBackProject = true
+    } else {
+        backProject.classList.remove('show')
+        document.body.style.overflow = 'auto'
+        showBackProject = false
+    }
+})
+closeBtn.addEventListener('click', event => {
+    if (!showBackProject) {
+        backProject.classList.add('show')
+        document.body.style.overflow = 'hidden'
+        showBackProject = true
+    } else {
+        backProject.classList.remove('show')
+        document.body.style.overflow = 'auto'
+        showBackProject = false
+    }
+})

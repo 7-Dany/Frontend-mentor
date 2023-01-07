@@ -17,8 +17,9 @@ body {
   background-color: #FAFAFA;
   background-repeat: no-repeat;
   background-size: 100% 50vh, 100% 50vh;
-  min-height: 100vh;
   padding-bottom: 2rem;
+  position: relative;
+  overflow-x: hidden;
 }
 
 @media (max-width: 750px) {

@@ -133,6 +133,7 @@ header {
   }
 }
 main {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -344,6 +345,188 @@ section {
   opacity: 0.5;
 }
 
+/* Back project section*/
+.back-project-model {
+  display: none;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: hsla(0deg, 0%, 0%, 0.2);
+  border: none;
+  border-radius: 0;
+  padding: 0 0 0 1rem;
+}
+.back-project-model.show {
+  display: flex;
+}
+
+.main-model {
+  margin: 12rem 0;
+  width: 750px;
+  height: max-content;
+  padding: 3rem;
+  border: 1px solid hsl(0deg, 0%, 90%);
+  border-radius: 12px;
+  background-color: hsl(0deg, 100%, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+}
+.main-model__close-modal {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  cursor: pointer;
+}
+.main-model__title {
+  font-size: 1.5rem;
+}
+.main-model__text {
+  color: hsl(0deg, 0%, 48%);
+  margin-bottom: 1rem;
+}
+.main-model__selection-option {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid hsl(0deg, 0%, 90%);
+  border-radius: 12px;
+  position: relative;
+  line-height: 1.8;
+}
+.main-model__selection-option::before {
+  content: "";
+  position: absolute;
+  top: 2.3rem;
+  left: 1.3125rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid hsl(0deg, 0%, 90%);
+  cursor: pointer;
+}
+.main-model__selection-option::after {
+  content: "";
+  position: absolute;
+  top: 2.4875rem;
+  left: 1.5rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: hsl(176deg, 50%, 47%);
+  display: none;
+}
+.main-model__selection-option.active {
+  border-color: hsl(176deg, 50%, 47%);
+}
+.main-model__selection-option.active::after {
+  display: block;
+}
+.main-model__selection-option.active .main-model__selection-option-pledge {
+  display: grid;
+}
+.main-model__selection-option-info {
+  padding: 2rem 2rem 2rem 4rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+.main-model__selection-option-title {
+  font-size: 1.1rem;
+  transition: 500ms all ease-in-out;
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.main-model__selection-option-title:hover {
+  color: hsl(176deg, 50%, 47%);
+}
+.main-model__selection-option-amount {
+  color: hsl(176deg, 50%, 47%);
+  font-size: 1rem;
+}
+.main-model__selection-option-text {
+  grid-column: 1/-1;
+  color: hsl(0deg, 0%, 48%);
+  font-size: 1rem;
+}
+.main-model__selection-option-left-number {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  justify-self: flex-end;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  color: hsl(0deg, 0%, 48%);
+}
+.main-model__selection-option-left-number span {
+  color: hsl(0deg, 0%, 0%);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.main-model__selection-option-pledge {
+  width: 100%;
+  border-top: 1px solid hsl(0deg, 0%, 90%);
+  padding: 2rem;
+  display: none;
+  grid-template-columns: 1fr 120px;
+  gap: 1rem;
+}
+.main-model__selection-option-pledge-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.main-model__selection-option-pledge-input {
+  width: 120px;
+  height: 50px;
+  border-radius: 25px;
+  border: 1px solid hsl(0deg, 0%, 90%);
+  outline: none;
+  text-indent: 40px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.main-model__selection-option-pledge-input::-webkit-inner-spin-button {
+  display: none;
+}
+.main-model__selection-option-pledge-dollar {
+  position: absolute;
+  right: 5.3rem;
+  color: hsl(0deg, 0%, 48%);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.main-model__selection-option-pledge-continue {
+  width: 120px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: hsl(176deg, 50%, 47%);
+  border: none;
+  color: hsl(0deg, 100%, 100%);
+  font-weight: 500;
+  cursor: pointer;
+  transition: 500ms all ease-in-out;
+}
+.main-model__selection-option-pledge-continue:hover {
+  background-color: hsl(176deg, 72%, 28%);
+}
+
 @media (max-width: 750px) {
   section {
     width: 100%;
@@ -407,8 +590,9 @@ body {
   background-color: #FAFAFA;
   background-repeat: no-repeat;
   background-size: 100% 50vh, 100% 50vh;
-  min-height: 100vh;
   padding-bottom: 2rem;
+  position: relative;
+  overflow-x: hidden;
 }
 
 @media (max-width: 750px) {
