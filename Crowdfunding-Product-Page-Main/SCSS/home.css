@@ -681,6 +681,14 @@ section {
   .main-model__selection-option-pledge-continue {
     width: 100%;
   }
+  /* Success Modal Section*/
+  .success-modal-container {
+    padding: 1.5rem;
+  }
+  .success-modal {
+    width: 100%;
+    padding: 2rem;
+  }
 }
 * {
   box-sizing: border-box;
