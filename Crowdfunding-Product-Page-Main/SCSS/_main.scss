@@ -345,6 +345,10 @@ section {
         display: grid;
       }
     }
+
+    &:nth-of-type(4) {
+      opacity: 0.5;
+    }
   }
 
   &__selection-option-info {
@@ -400,15 +404,14 @@ section {
     border-top: 1px solid $light-gray;
     padding: 2rem;
     display: none;
-    grid-template-columns: 1fr 120px;
+    grid-template-columns: 1fr 120px 120px;
+    align-items: center;
     gap: 1rem;
+    position: relative;
   }
 
   &__selection-option-pledge-label {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
+    color: $dark-gray;
   }
 
   &__selection-option-pledge-input {
@@ -424,11 +427,18 @@ section {
     &::-webkit-inner-spin-button {
       display: none;
     }
+
+    &:active,
+    &:hover,
+    &:focus {
+      outline: 1px solid $moderate-cyan;
+    }
   }
 
   &__selection-option-pledge-dollar {
     position: absolute;
-    right: 5.3rem;
+    right: 15.8rem;
+    top: 2.8rem;
     color: $dark-gray;
     font-size: 0.85rem;
     font-weight: 700;
@@ -444,6 +454,64 @@ section {
     font-weight: 500;
     cursor: pointer;
     transition: 500ms all ease-in-out;
+
+    &:hover {
+      background-color: $dark-cyan;
+    }
+  }
+}
+
+
+/* Success Modal section */
+.success-modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: hsla(0, 0%, 0%, 0.2);
+  border: none;
+  border-radius: 0;
+  padding: 0;
+
+  &.active {
+    display: flex;
+  }
+}
+
+.success-modal {
+  width: 750px;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+  background-color: $white;
+  padding: 4rem;
+  border-radius: 12px;
+
+  &__text {
+    color: $dark-gray;
+  }
+
+  &__button {
+    width: 120px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    color: $white;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: $moderate-cyan;
+    transition: 500ms all ease-in-out;
+    cursor: pointer;
 
     &:hover {
       background-color: $dark-cyan;
@@ -515,6 +583,62 @@ section {
     &__option-select-button {
       grid-column: 1/-1;
       justify-self: flex-start;
+    }
+  }
+
+  /* Selection Modal Section */
+  .back-project-model {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+  .main-model {
+    width: 100%;
+    padding: 1.5rem;
+
+    &__selection-option-info {
+      padding: 1.5rem;
+      grid-template-columns: 1rem 1fr;
+      gap: 1rem;
+    }
+
+    &__selection-option-title {
+      grid-column: 2/-1;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    &__selection-option-left-number {
+      grid-column: 1/-1;
+      grid-row: unset;
+      justify-self: flex-start;
+    }
+
+    &__selection-option-pledge {
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+    }
+
+    &__selection-option-pledge-label {
+      grid-column: 1/-1;
+      text-align: center;
+    }
+
+    &__selection-option-pledge-input {
+      width: 100%;
+      justify-self: flex-start;
+    }
+
+    &__selection-option-pledge-dollar {
+      bottom: 2.75rem;
+      left: 3.8rem;
+      top: unset;
+      right: unset;
+    }
+
+    &__selection-option-pledge-continue {
+      width: 100%;
     }
   }
 }
